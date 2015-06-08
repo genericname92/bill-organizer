@@ -1,39 +1,27 @@
 # Schema Information
 
-## blogs
+## bills
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
 owner_id    | integer   | not null, foreign key (references users)
 title       | string    | not null
+type        | string    |
+amount      | float     | not null
 
 ## followings
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
-blog_id     | integer   | not null, foreign key (references blogs)
+blog_id     | integer   | not null, foreign key (references bills)
 follower_id | integer   | not null, foreign key (references users)
 
-## posts
+## roommates
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
-author_id   | integer   | not null, foreign key (references users)
-title       | string    | not null
-body        | string    |
-
-## tags
-column name | data type | details
-------------|-----------|-----------------------
-id          | integer   | not null, primary key
-label       | string    | not null, unique
-
-## taggings
-column name | data type | details
-------------|-----------|-----------------------
-id          | integer   | not null, primary key
-post_id     | integer   | not null, foreign key (references posts)
-tag_id      | integer   | not null, foreign key (references tags)
+bill_id     | integer   | not null, foreign key (references bills)
+email       | string    | not null
 
 ## users
 column name     | data type | details
@@ -42,4 +30,3 @@ id              | integer   | not null, primary key
 email           | string    | not null, unique
 password_digest | string    | not null
 session_token   | string    | not null, unique
-

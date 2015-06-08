@@ -1,11 +1,10 @@
-# Phase 5: Searching for Blogs and Posts
+# Phase 5: Search Bar
 
 ## Rails
 ### Models
 
 ### Controllers
-Api::BlogsController (search)
-Api::PostsController (search)
+Api::BillsController (search)
 
 ### Views
 
@@ -15,8 +14,6 @@ Api::PostsController (search)
 ### Collections
 
 ### Views
-* BlogSearchItem
-* SearchShow (composite view, contains BlogsIndex and PostsIndex subviews)
+* BillSearchItem
 
 ## Gems/Libraries
-

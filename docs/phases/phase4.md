@@ -1,4 +1,4 @@
-# Phase 4: User Feeds
+# Phase 4: User Profile Options, Linking other users
 
 ## Rails
 ### Models
@@ -15,6 +15,8 @@ posts/feed.json.jbuilder
 ### Collections
 
 ### Views
+* BillsIndex (composite view, contains PostsIndexItem subviews)
+* BillsIndexItem
 * FeedShow (composite view, contains PostsIndex subview)
 
 ## Gems/Libraries

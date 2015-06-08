@@ -1,6 +1,9 @@
-# Phase 3: Editing and Displaying Posts
+# Phase 3: Add mailer
 
 ## Rails
+
+### Mailers
+* Billmailer
 ### Models
 
 ### Controllers
@@ -13,9 +16,6 @@
 ### Collections
 
 ### Views
-* PostForm
+* Mailform
 
 ## Gems/Libraries
-* Filepicker
-* Markdown-js
-* Bootstrap Markdown

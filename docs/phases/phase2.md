@@ -1,29 +1,24 @@
-# Phase 2: Viewing Blogs and Posts
+# Phase 2: CRUD bills within Backbone, bill calculations
 
 ## Rails
 ### Models
 
 ### Controllers
-Api::BlogsController (create, destroy, index, show)
-Api::PostsController (create, destroy, show, update)
+Api::BillsController (create, destroy, index, show, update)
 
 ### Views
 * blogs/show.json.jbuilder
 
 ## Backbone
 ### Models
-* Blog (parses nested `posts` association)
-* Post
+* Bill (parses nested `posts` association)
 
 ### Collections
-* Blogs
-* Posts
+* Bills
+* Roommates
 
 ### Views
-* BlogForm
-* BlogShow (composite view, contains PostsIndex subview)
-* PostsIndex (composite view, contains PostsIndexItem subviews)
-* PostsIndexItem
-* PostShow
+* BillForm
+* BillShow
 
 ## Gems/Libraries
