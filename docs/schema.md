@@ -8,6 +8,8 @@ owner_id    | integer   | not null, foreign key (references users)
 title       | string    | not null
 type        | string    |
 amount      | float     | not null
+From        | date      | not null
+End         | date      | not null
 
 ## followings
 column name | data type | details
