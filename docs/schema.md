@@ -24,6 +24,7 @@ column name | data type | details
 id          | integer   | not null, primary key
 bill_id     | integer   | not null, foreign key (references bills)
 email       | string    | not null
+name        | string
 
 ## users
 column name     | data type | details
