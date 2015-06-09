@@ -15,7 +15,6 @@ gem 'backbone-on-rails'
 gem 'jquery-ui-rails'
 
  gem 'bcrypt', '~> 3.1.7'
-gem 'ruby', '2.1.2'
 group :development, :test do
   gem 'byebug'
 

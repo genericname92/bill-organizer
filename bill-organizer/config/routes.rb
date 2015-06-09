@@ -3,4 +3,7 @@ Rails.application.routes.draw do
 
   resources :users
   resource :session
+  namespace :api, defaults: {format: :json} do
+    resources :bills, except: [:new, :edit]
+  end
 end
