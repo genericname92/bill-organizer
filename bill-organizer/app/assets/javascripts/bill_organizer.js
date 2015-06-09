@@ -7,13 +7,14 @@ window.BillOrganizer = {
     BillOrganizer.bills = new BillOrganizer.Collections.Bills();
     BillOrganizer.bills.fetch({reset: true});
     var router = new BillOrganizer.Routers.Router({
-      $rootEl: $('.main'),
+      $rootEl: $('#main'),
       collection: BillOrganizer.bills
     });
     var navbar = new BillOrganizer.Views.NavView({
       router: router,
       collection: BillOrganizer.bills
     });
+    $('#navbar').html(navbar.render().$el);
   }
 };
 

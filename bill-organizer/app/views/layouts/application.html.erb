@@ -7,7 +7,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <%= render 'layouts/navbar' %>
+  <% if flash[:errors] %>
+    <% flash[:errors].each do |error| %>
+      <%= error %>
+    <% end %>
+  <% end %>
+  <% if current_user %>
+  <script>
+    window.CURRENT_USER_ID = <%=current_user.id %>;
+  </script>
+  <% end %>
 <%= yield %>
 
 </body>
