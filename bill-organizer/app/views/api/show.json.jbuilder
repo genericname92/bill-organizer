@@ -1,4 +1,4 @@
-json.(@bill, :id, :owner_id, :title, :type, :amount, :from_date, :end_date, :created_at, :updated_at)
+json.(@bill, :id, :owner_id, :title, :bill_type, :amount, :from_date, :end_date, :created_at, :updated_at)
 
 json.roommates @bill.roommates do |roommate|
   json.id roommate.id

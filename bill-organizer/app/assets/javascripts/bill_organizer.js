@@ -4,7 +4,8 @@ window.BillOrganizer = {
   Views: {},
   Routers: {},
   initialize: function() {
-    alert('Hello from Backbone!');
+    new BillOrganizer.Routers.Router($this.el: $('.main'));
+
   }
 };
 

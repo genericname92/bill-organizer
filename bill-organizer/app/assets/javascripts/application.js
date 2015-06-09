@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require underscore
 //= require backbone
+//= require bootstrap-sprockets
 //= require jquery.serializejson
 //= require composite_view
 //= require bill_organizer
