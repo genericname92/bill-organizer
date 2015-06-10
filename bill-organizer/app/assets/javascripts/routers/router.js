@@ -12,7 +12,8 @@ BillOrganizer.Routers.Router = Backbone.Router.extend({
 
   routes: {
     "": "index",
-    "api/bills/:id": "show"
+    "bills/new": "new",
+    "bills/:id": "show"
   },
 
   index: function() {
@@ -20,7 +21,13 @@ BillOrganizer.Routers.Router = Backbone.Router.extend({
     this._swapView(view);
   },
 
-  show: function() {
+  new: function(){
+    var newBill = new BillOrganizer.Models.Bill();
+    var view = new BillOrganizer.Views.BillForm({model: newBill});
+    this._swapView(view);
+  },
+
+  show: function(id) {
     var bill = this.collection.getOrFetch(id);
     var view = new BillOrganizer.Views.BillShow({model: bill});
     this._swapView(view);

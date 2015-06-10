@@ -16,3 +16,10 @@
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
+
+
+ .group:after {
+   content: "";
+   display: block;
+   clear: both;
+ }

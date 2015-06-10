@@ -1,5 +1,13 @@
 module Api
-  class BillsController < ApiController
+  class BillsController < ApplicationController
+    before_action :require_signed_in!, except: :show
+
+    def require_signed_in!
+      unless signed_in?
+        render json: ["You must be signed in to perform that action!"], status: :unauthorized
+      end
+    end
+    
     def create
       @bill = current_user.bills.new(bill_params)
       if @bill.save

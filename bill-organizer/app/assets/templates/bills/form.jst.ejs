@@ -1,0 +1,16 @@
+<form>
+  <label>Bill Type
+  <input type="text" name="bill_type" value="<%=bill.escape("bill_type")%>">
+  </label>
+  <label>Amount
+  <input type="text" name="amount" value="<%=bill.escape("amount")%>">
+  </label>
+  <label> From
+  <input type="date" name="from_date" value="<%=bill.escape("from_date")%>">
+  </label>
+  <label> End
+  <input type="date" name="end_date" value="<%=bill.escape("end_date")%>"
+  </label>
+  <input type="submit" value="Create a bill!">
+
+</form>
