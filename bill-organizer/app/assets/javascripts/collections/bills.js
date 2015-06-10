@@ -2,6 +2,10 @@ BillOrganizer.Collections.Bills = Backbone.Collection.extend({
   url: 'api/bills',
   model: BillOrganizer.Models.Bill,
 
+  comparator: function(bill){
+    return bill.escape('updated_at');
+  },
+
   getOrFetch: function(id){
     var collection = this;
     var bill = collection.get(id);

@@ -10,3 +10,14 @@
   </label><br>
   <input type="submit" value="Submit" class="btn btn-primary"><br>
 </form>
+<br>
+<br>
+<form action="/session" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input name="user[email]" type="hidden" value="guest">
+  <input name="user[password]" type="hidden" value="password">
+  <input type="submit" value="Sign In as Guest" class="btn btn-primary">
+</form>
+<br>
+<br>
+No account? Sign up <a href="<%=new_user_url%>">here!</a>

@@ -5,7 +5,8 @@ BillOrganizer.Views.BillShow = Backbone.View.extend({
   },
 
   events: {
-    "click .editBill": "edit"
+    "click .editBill": "edit",
+    "click .deleteBill": "destroyBill"
   },
   render: function(){
     var date = "";
@@ -32,5 +33,12 @@ BillOrganizer.Views.BillShow = Backbone.View.extend({
 
   edit: function(){
     Backbone.history.navigate("bills/"+this.model.id+"/edit", {trigger: true});
+  },
+
+  destroyBill: function(){
+    //note: this will have subviews later, kill them with inpugnity
+    this.model.destroy();
+    this.remove();
+    Backbone.history.navigate("", {trigger: true});
   }
 });
