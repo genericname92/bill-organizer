@@ -1,16 +1,34 @@
-<form>
-  <label>Bill Type
-  <input type="text" name="bill_type" value="<%=bill.escape("bill_type")%>">
-  </label>
-  <label>Amount
-  <input type="text" name="amount" value="<%=bill.escape("amount")%>">
-  </label>
-  <label> From
-  <input type="date" name="from_date" value="<%=bill.escape("from_date")%>">
-  </label>
-  <label> End
-  <input type="date" name="end_date" value="<%=bill.escape("end_date")%>"
-  </label>
-  <input type="submit" value="Create a bill!">
-
-</form>
+<div class="row">
+  <ul class="errors">
+  </ul>
+  <form class="col-md-3 col-md-offset-6" role="form">
+    <div class="form-group">
+      <label>Bill Name
+        <input class="form-control" type="text" name="title" value="<%=bill.escape("title")%>">
+      </label>
+    </div>
+    <div class="form-group">
+      <label>Bill Type
+        <input class="form-control" type="text" name="bill_type" value="<%=bill.escape("bill_type")%>">
+      </label>
+    </div>
+    <div class="form-group">
+      <label>Amount
+        <input class="form-control" type="text" name="amount" value="<%=bill.escape("amount")%>">
+      </label>
+    </div>
+    <div class="form-group">
+      <label> From
+        <input class="form-control" type="date" name="from_date" value="<%=bill.escape("from_date")%>">
+      </label>
+    </div>
+    <div class="form-group">
+      <label> End
+        <input class="form-control" type="date" name="end_date" value="<%=bill.escape("end_date")%>"
+      </label>
+    </div>
+    <div class="form-group">
+      <input class="btn btn-default" type="submit" value="Create a bill!">
+    </div>
+  </form>
+</div>

@@ -7,11 +7,11 @@ module Api
         render json: ["You must be signed in to perform that action!"], status: :unauthorized
       end
     end
-    
+
     def create
       @bill = current_user.bills.new(bill_params)
       if @bill.save
-        redirect_to ""
+        render json: @bill, status: 200
       else
         render json: @bill.errors.full_messages, status: :unprocessable_entity
       end
