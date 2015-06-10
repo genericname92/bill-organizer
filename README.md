@@ -2,7 +2,7 @@
 
 [Heroku link][heroku]
 
-[heroku]: TODO
+[heroku]: https://bill-organizer.herokuapp.com
 
 ## Minimum Viable Product
 Bill organizer is a Rails and Backbone web application built for the simple purpose of aiding and organizing household bills amongst roommates.
