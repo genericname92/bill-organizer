@@ -3,6 +3,10 @@ BillOrganizer.Views.BillShow = Backbone.View.extend({
   initialize: function(){
     this.listenTo(this.model, 'sync', this.render);
   },
+
+  events: {
+    "click .editBill": "edit"
+  },
   render: function(){
     var date = "";
     if (this.model.created_at !== this.model.updated_at){
@@ -24,5 +28,9 @@ BillOrganizer.Views.BillShow = Backbone.View.extend({
         return date.substring(0, c);
       }
     }
+  },
+
+  edit: function(){
+    Backbone.history.navigate("bills/"+this.model.id+"/edit", {trigger: true});
   }
 });

@@ -17,6 +17,15 @@ module Api
       end
     end
 
+    def update
+      @bill = Bill.find(params[:id])
+      if @bill.update(bill_params)
+        render json: @bill
+      else
+        render json: @bill.errors.full_messages, status: unprocessable_entity
+      end
+    end
+
     def destroy
       @bill = current_user.bills.find(params[:id])
       @bill.try(:destroy)

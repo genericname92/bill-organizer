@@ -1,15 +1,16 @@
 BillOrganizer.Views.BillForm = Backbone.View.extend({
   template: JST["bills/form"],
 
-  initialize: function(){
+  initialize: function(options){
     this.listenTo(this.model, "sync change", this.render);
+    this.formType = options.formType;
   },
   events: {
     "submit form": "submit"
   },
 
   render: function(){
-    var content = this.template({bill: this.model});
+    var content = this.template({bill: this.model, formType: this.formType});
     this.$el.html(content);
     return this;
   },
@@ -23,7 +24,7 @@ BillOrganizer.Views.BillForm = Backbone.View.extend({
       wait: true,
       success: function(){
         this.collection.add(this.model, {merge: true});
-        Backbone.history.navigate("", {trigger: true});
+        Backbone.history.navigate("bills/"+this.model.id, {trigger: true});
       }.bind(this),
       error: function(model, response){
         $('.errors').empty();

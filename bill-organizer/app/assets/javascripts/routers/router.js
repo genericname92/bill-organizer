@@ -14,7 +14,8 @@ BillOrganizer.Routers.Router = Backbone.Router.extend({
     "": "index",
     "bills/new": "new",
     "bills/:id": "show",
-    "bills/:id/roommates/new": "newRoommates"
+    "bills/:id/roommates/new": "newRoommates",
+    "bills/:id/edit": "edit"
   },
 
   index: function() {
@@ -24,13 +25,27 @@ BillOrganizer.Routers.Router = Backbone.Router.extend({
 
   new: function(){
     var newBill = new BillOrganizer.Models.Bill();
-    var view = new BillOrganizer.Views.BillForm({model: newBill, collection: this.collection});
+    var view = new BillOrganizer.Views.BillForm({
+      model: newBill,
+      collection: this.collection,
+      formType: "Create"
+    });
     this._swapView(view);
   },
 
   show: function(id) {
     var bill = this.collection.getOrFetch(id);
     var view = new BillOrganizer.Views.BillShow({model: bill});
+    this._swapView(view);
+  },
+
+  edit: function(id) {
+    var bill = this.collection.getOrFetch(id);
+    var view = new BillOrganizer.Views.BillForm({
+      model: bill,
+      collection: this.collection,
+      formType: "Edit"
+    });
     this._swapView(view);
   },
 
