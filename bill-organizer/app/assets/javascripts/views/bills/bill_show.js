@@ -37,8 +37,11 @@ BillOrganizer.Views.BillShow = Backbone.View.extend({
 
   destroyBill: function(){
     //note: this will have subviews later, kill them with inpugnity
-    this.model.destroy();
-    this.remove();
-    Backbone.history.navigate("", {trigger: true});
+    var confirmation = confirm("Are you sure you want to delete this bill?");
+    if (confirmation) {
+      this.model.destroy();
+      this.remove();
+      Backbone.history.navigate("", {trigger: true});
+    }
   }
 });
