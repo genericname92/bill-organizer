@@ -7,7 +7,7 @@ BillOrganizer.Routers.Router = Backbone.Router.extend({
   _swapView: function(view) {
     this._currentView && this._currentView.remove();
     this._currentView = view;
-    this.$rootEl.thml(view.rener().$el);
+    this.$rootEl.html(view.render().$el);
   },
 
   routes: {
@@ -16,7 +16,7 @@ BillOrganizer.Routers.Router = Backbone.Router.extend({
   },
 
   index: function() {
-    var view = new BillOrganizer.Views.BillIndex({collection: this.collection});
+    var view = new BillOrganizer.Views.BillsIndex({collection: this.collection});
     this._swapView(view);
   },
 

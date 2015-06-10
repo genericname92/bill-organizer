@@ -15,6 +15,7 @@ window.BillOrganizer = {
       collection: BillOrganizer.bills
     });
     $('#navbar').html(navbar.render().$el);
+  Backbone.history.start();
   }
 };
 
