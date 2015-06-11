@@ -1,9 +1,28 @@
-BillOrganizer.Views.BillShow = Backbone.View.extend({
+BillOrganizer.Views.BillShow = Backbone.CompositeView.extend({
   template: JST["bills/show"],
   initialize: function(){
     this.listenTo(this.model, 'sync', this.render);
+    this.listenTo(this.model.roommates(), "add", this.addRoommate);
+    this.listenTo(this.model.roommates(), "remove", this.removeRoommate);
+    this.model.roommates().each(function(roommate){
+      this.addRoommate(roommate);
+    }.bind(this));
+    this.addRoommateForm();
+  },
+  addRoommate: function(roommate){
+    var view = new BillOrganizer.Views.RoommateItem({model: roommate});
+    this.addSubview('.roommateContainer', view, true);
   },
 
+  removeRoommate: function(){
+
+  },
+
+  addRoommateForm: function(){
+    var roommate = new BillOrganizer.Models.Roommate({bill: this});
+    var view = new BillOrganizer.Views.RoommatesNew({model: roommate});
+    this.addSubview('.roommateContainer', view);
+  },
   events: {
     "click .editBill": "edit",
     "click .deleteBill": "destroyBill"
@@ -17,6 +36,7 @@ BillOrganizer.Views.BillShow = Backbone.View.extend({
     }
     var content = this.template({bill: this.model, date: date});
     this.$el.html(content);
+    this.attachSubviews();
     return this;
   },
   parseDate: function(date){

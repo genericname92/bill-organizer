@@ -5,7 +5,7 @@ window.BillOrganizer = {
   Routers: {},
   initialize: function() {
     BillOrganizer.bills = new BillOrganizer.Collections.Bills();
-    BillOrganizer.bills.fetch({reset: true});
+    BillOrganizer.bills.fetch();
     var router = new BillOrganizer.Routers.Router({
       $rootEl: $('#main'),
       collection: BillOrganizer.bills

@@ -16,6 +16,8 @@ json.roommates @bill.roommates do |roommate|
   json.bill_id roommate.bill_id
   json.email roommate.email
   json.paid roommate.paid
+  json.from_date roommate.from_date
+  json.end_date roommate.end_date
   json.created_at roommate.created_at
   json.updated_at roommate.updated_at
 end

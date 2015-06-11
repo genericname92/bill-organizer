@@ -1,0 +1,8 @@
+<button class="editRoomate pull-left btn-group btn-group-sm glyphicon glyphicon-pencil"
+  type=button></button>
+<ul class="roommateAttrs">
+  <li> Email: <%= roommate.escape("email") %></li>
+  <li class="paidBox"> Paid: <%= roommate.escape("paid") %></li>
+  <li> From: <%= roommate.escape("from_date") %> </li>
+  <li> End: <%= roommate.escape("end_date") %> </li>
+</ul>

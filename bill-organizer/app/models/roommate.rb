@@ -14,5 +14,5 @@
 
 class Roommate < ActiveRecord::Base
   belongs_to :bill
-  validates :email, :paid, :from_date, :end_date, presence: true
+  validates :email, :from_date, :end_date, presence: true
 end
