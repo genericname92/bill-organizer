@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   resource :session
   namespace :api, defaults: {format: :json} do
     resources :bills, except: [:new, :edit]
+    resources :roommates, only: [:create, :update, :destroy]
   end
 end

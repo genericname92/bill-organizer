@@ -1,0 +1,54 @@
+<div class="row">
+  <ul class="errors">
+  </ul>
+  <form class="col-md-3 col-md-offset-6" role="form">
+    <div class="form-group">
+      <label>Email:
+        <input
+          class="form-control"
+          type="text"
+          name="email"
+          value="<%=roommate.escape("email")%>"
+        >
+      </label>
+    </div>
+    <div class="form-group">
+      <label>Amount
+        <input
+          class="form-control"
+          type="text"
+          name="amount"
+          value="<%=bill.escape("amount")%>"
+        >
+      </label>
+    </div>
+    This Roommate lived here between
+    <div class="form-group">
+      <label> Start:
+        <input
+        class="form-control"
+        type="date"
+        name="from_date"
+        value="<%=bill.escape("from_date")%>"
+        >
+      </label>
+    </div>
+    <div class="form-group">
+      <label> End:
+        <input
+          class="form-control"
+          type="date"
+          name="end_date"
+          value="<%=bill.escape("end_date")%>"
+        >
+      </label>
+    </div>
+    <div class="form-group">
+      <input
+        class="btn btn-default"
+        type="submit"
+        value="<%=formType%> a bill!"
+      >
+    </div>
+  </form>
+</div>

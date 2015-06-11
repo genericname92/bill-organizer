@@ -8,6 +8,8 @@
 #  paid       :boolean          default(FALSE)
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  from_date  :date             not null
+#  end_date   :date             not null
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

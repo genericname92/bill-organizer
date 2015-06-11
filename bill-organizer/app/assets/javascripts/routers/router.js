@@ -14,7 +14,6 @@ BillOrganizer.Routers.Router = Backbone.Router.extend({
     "": "index",
     "bills/new": "new",
     "bills/:id": "show",
-    "bills/:id/roommates/new": "newRoommates",
     "bills/:id/edit": "edit"
   },
 
@@ -50,8 +49,4 @@ BillOrganizer.Routers.Router = Backbone.Router.extend({
     this._swapView(view);
   },
 
-  newRoommates: function(id) {
-    var bill = this.collection.getOrFetch(id);
-//    var view = new BillOrganizer.Views.RoommateForm({})
-  }
 });
