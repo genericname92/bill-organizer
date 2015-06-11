@@ -19,6 +19,7 @@ BillOrganizer.Routers.Router = Backbone.Router.extend({
   },
 
   index: function() {
+    this.collection.sort();
     var view = new BillOrganizer.Views.BillsIndex({collection: this.collection});
     this._swapView(view);
   },

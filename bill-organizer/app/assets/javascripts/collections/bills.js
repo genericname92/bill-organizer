@@ -3,7 +3,8 @@ BillOrganizer.Collections.Bills = Backbone.Collection.extend({
   model: BillOrganizer.Models.Bill,
 
   comparator: function(bill){
-    return bill.escape('updated_at');
+    var dateObject = new Date(bill.escape('end_date'));
+    return -dateObject.getTime();
   },
 
   getOrFetch: function(id){
