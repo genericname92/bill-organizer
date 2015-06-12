@@ -15,6 +15,7 @@
 //= require underscore
 //= require backbone
 //= require bootstrap-sprockets
+//= require backbone.memento
 //= require jquery.serializejson
 //= require composite_view
 //= require bill_organizer

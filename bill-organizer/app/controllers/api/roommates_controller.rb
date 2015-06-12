@@ -14,7 +14,7 @@ module Api
       if @roommate.update(roommate_params)
         render json: @roommate
       else
-        render json: @roommate.errors.full_messages, status: unprocessable_entity
+        render json: @roommate.errors.full_messages, status: :unprocessable_entity
       end
     end
 

@@ -9,7 +9,8 @@ BillOrganizer.Views.RoommateItem = Backbone.View.extend({
 
   events: {
     "change .paidBox": "getPaid",
-    "click .editRoommate": "editRoommate"
+    "click .editRoommate": "editRoommate",
+    "click .killRoommate": "killRoommate"
   },
 
   render: function () {
@@ -58,16 +59,10 @@ BillOrganizer.Views.RoommateItem = Backbone.View.extend({
       collection: this.model.collection
     });
     $('body').prepend(modal.render().$el);
-    // var bd = $('<div class="modal-backdrop"></div>');
-    // bd.appendTo(document.querySelector(".backdrop"));
-    // var form = new BillOrganizer.Views.RoommatesNew({
-    //   model: this.model,
-    //   formType: "Edit"
-    // });
-    // $('.content').html(form.render().$el);
-    // setTimeout(function(){
-    //   bd.remove();
-    //   form.remove();
-    // }, 2000);
+  },
+
+  killRoommate: function(){
+    this.model.destroy();
+    this.remove();
   }
 });

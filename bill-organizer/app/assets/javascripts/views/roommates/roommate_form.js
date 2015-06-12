@@ -2,7 +2,7 @@ BillOrganizer.Views.RoommatesNew = Backbone.View.extend({
   template: JST["roommates/form"],
   initialize: function(options){
     this.formType = options.formType;
-    this.listenTo(this.model, 'change sync', this.render);
+    this.listenTo(this.model, 'sync', this.render);
   },
 
   events: {
@@ -19,6 +19,7 @@ BillOrganizer.Views.RoommatesNew = Backbone.View.extend({
 
   submit: function(event){
     event.preventDefault();
+    this.model.store();
     var attrs = $(event.currentTarget).serializeJSON();
     this.model.set(attrs);
     this.model.save({},
@@ -34,8 +35,9 @@ BillOrganizer.Views.RoommatesNew = Backbone.View.extend({
             var $li = $('<li></li>');
             $li.text(el);
             $('.errors').append($li);
-          }.bind(this));
-        }
+          });
+          this.model.restore();
+        }.bind(this)
       });
     }
 });

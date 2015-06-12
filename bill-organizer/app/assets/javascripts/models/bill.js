@@ -11,9 +11,5 @@ roommates: function(){
     this._roommates = new BillOrganizer.Collections.Roommates([], { bill: this });
   }
   return this._roommates;
-},
-
-calculateBill: function(){
-  debugger;
 }
 });

@@ -4,11 +4,11 @@ BillOrganizer.Views.BillShow = Backbone.CompositeView.extend({
     this.listenTo(this.model, 'sync', this.render);
     this.listenTo(this.model.roommates(), "add", this.addRoommate);
     this.listenTo(this.model.roommates(), "remove", this.removeRoommate);
+    this.listenTo(this.model.roommates(), 'sync change remove add', this.renderSubviews);
     this.calculator = new BillOrganizer.Calculator(this.model);
     this.model.roommates().each(function(roommate){
       this.addRoommate(roommate);
     }.bind(this));
-    // this.addRoommateForm();
   },
   addRoommate: function(roommate){
     var view = new BillOrganizer.Views.RoommateItem({
@@ -24,16 +24,17 @@ BillOrganizer.Views.BillShow = Backbone.CompositeView.extend({
 
   addRoommateForm: function(){
     var roommate = new BillOrganizer.Models.Roommate({bill: this.model});
-    var view = new BillOrganizer.Views.RoommatesNew({
+    var modal = new BillOrganizer.Views.RoommatesNew({
       model: roommate,
       formType: "Create",
       collection: this.model.roommates()
     });
-    this.addSubview('.roommateForm', view);
+    $('body').prepend(modal.render().$el);
   },
   events: {
     "click .editBill": "edit",
-    "click .deleteBill": "destroyBill"
+    "click .deleteBill": "destroyBill",
+    "click .roommateNew": "addRoommateForm"
   },
   render: function(){
     var date = "";
@@ -46,6 +47,13 @@ BillOrganizer.Views.BillShow = Backbone.CompositeView.extend({
     this.$el.html(content);
     this.attachSubviews();
     return this;
+  },
+
+  renderSubviews: function(){
+    this.eachSubview(function(subview){
+      subview.render();
+    });
+    this.render();
   },
   parseDate: function(date){
     if (date === "undefined"){

@@ -1,10 +1,15 @@
 <div class="billShowContainer group">
   <div class="billShowTitle pull-left"><%= bill.escape("title") %></div>
-  <button class="editBill pull-left btn-group btn-group-sm glyphicon glyphicon-pencil"
-          type=button></button>
+  <button
+    class="editBill pull-left btn-group btn-group-sm glyphicon glyphicon-pencil"
+    type=button
+    title="Edit this bill!">
+  </button>
   <button
     class="deleteBill btn btn-danger pull-left btn-group btn-group-sm glyphicon glyphicon-remove-sign"
-          type=button></button>
+    type=button
+    title="Delete this bill!">
+  </button>
 <div class="billDetails">
   <table>
     <tr>
@@ -30,6 +35,11 @@
 </div>
 </div>
 <div class="roommateShowContainer group">
+  <label> Add new person
+    <button
+      class="glyphicon glyphicon-plus roommateNew"
+      title="Add a new roommate!">
+    </button>
+  </label>
   <div class="roommateContainer group"></div>
-  <div class="roommateForm" group "></div>
 </div>

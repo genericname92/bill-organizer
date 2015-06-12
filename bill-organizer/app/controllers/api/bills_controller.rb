@@ -22,7 +22,7 @@ module Api
       if @bill.update(bill_params)
         render json: @bill
       else
-        render json: @bill.errors.full_messages, status: unprocessable_entity
+        render json: @bill.errors.full_messages, status: :unprocessable_entity
       end
     end
 
