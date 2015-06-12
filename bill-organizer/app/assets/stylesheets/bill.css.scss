@@ -7,8 +7,15 @@
   button {
     margin: 20px 10px 0 10px;
   }
+  width: 40%;
+  float: left;
+  text-align: left;
 }
 
+.billDetails {
+  clear: both;
+  display: block;
+}
 .deleteBill {
   padding-left: 5px;
   padding-right: 5px;
@@ -25,4 +32,47 @@
 
 .billItem a {
   font-size: 24px;
+}
+
+.roommateContainer {
+  label {
+    float: left;
+    margin-top: 10px;
+    position: relative;
+  }
+
+  button {
+    margin-top: 10px;
+    position: relative;
+  }
+}
+
+.roommateAttrs {
+  float: right;
+  li {
+    list-style: none;
+  }
+}
+
+.SingleRoommate {
+  margin-bottom: 5px;
+}
+
+.paidRoommate{
+  background: green;
+}
+
+.unpaidRoommate{
+  background: red;
+}
+
+
+.roommateShowContainer {
+  width: 30%;
+  float: right;
+}
+
+.modal-backdrop {
+  background-color: #ccc;
+  opacity: 0.5;
 }

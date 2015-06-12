@@ -1,8 +1,13 @@
-<button class="editRoomate pull-left btn-group btn-group-sm glyphicon glyphicon-pencil"
+<button class="editRoommate pull-left btn-group btn-group-sm glyphicon glyphicon-pencil"
   type=button></button>
+  <label> Paid?
+    <input class="paidBox pull-left" type="checkbox" <%=checked%> >
+  </label>
 <ul class="roommateAttrs">
   <li> Email: <%= roommate.escape("email") %></li>
-  <li class="paidBox"> Paid: <%= roommate.escape("paid") %></li>
-  <li> From: <%= roommate.escape("from_date") %> </li>
-  <li> End: <%= roommate.escape("end_date") %> </li>
+  <li>
+    <%= roommate.escape("from_date") %>
+    ->
+    <%= roommate.escape("end_date") %>
+  </li>
 </ul>

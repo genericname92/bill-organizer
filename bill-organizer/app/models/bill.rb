@@ -15,6 +15,7 @@
 
 class Bill < ActiveRecord::Base
   validates :title, :bill_type, :owner_id, :amount, :from_date, :end_date, presence: true
+  validate :date_durations
   has_many :roommates
   belongs_to(
     :owner,
@@ -22,4 +23,10 @@ class Bill < ActiveRecord::Base
     primary_key: "id",
     foreign_key: "owner_id",
   )
+
+  def date_durations
+    if from_date - end_date > 0
+      errors.add(:duration, "End date cannot be before Start Date")
+    end
+  end
 end

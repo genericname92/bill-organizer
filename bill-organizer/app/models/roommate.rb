@@ -15,4 +15,10 @@
 class Roommate < ActiveRecord::Base
   belongs_to :bill
   validates :email, :from_date, :end_date, presence: true
+  validate :date_durations
+  def date_durations
+    if from_date - end_date > 0
+      errors.add(:duration, "End date cannot be before Start Date")
+    end
+  end
 end

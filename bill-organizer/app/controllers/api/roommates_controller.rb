@@ -1,7 +1,7 @@
 module Api
   class RoommatesController < ApplicationController
     def create
-      @roommate = Roommate.new(bill_params.merge!(bill_id: params[:id]))
+      @roommate = Roommate.new(roommate_params.merge!(bill_id: params[:bill][:id]))
       if @roommate.save
         render json: @roommate, status: 200
       else

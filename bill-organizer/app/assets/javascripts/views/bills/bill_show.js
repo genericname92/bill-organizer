@@ -14,14 +14,18 @@ BillOrganizer.Views.BillShow = Backbone.CompositeView.extend({
     this.addSubview('.roommateContainer', view, true);
   },
 
-  removeRoommate: function(){
-
+  removeRoommate: function(roommate){
+    this.removeModelSubview(".roommateContainer", roommate);
   },
 
   addRoommateForm: function(){
-    var roommate = new BillOrganizer.Models.Roommate({bill: this});
-    var view = new BillOrganizer.Views.RoommatesNew({model: roommate});
-    this.addSubview('.roommateContainer', view);
+    var roommate = new BillOrganizer.Models.Roommate({bill: this.model});
+    var view = new BillOrganizer.Views.RoommatesNew({
+      model: roommate,
+      formType: "Create",
+      collection: this.model.roommates()
+    });
+    this.addSubview('.roommateForm', view);
   },
   events: {
     "click .editBill": "edit",
@@ -56,12 +60,12 @@ BillOrganizer.Views.BillShow = Backbone.CompositeView.extend({
   },
 
   destroyBill: function(){
-    //note: this will have subviews later, kill them with inpugnity
     var confirmation = confirm("Are you sure you want to delete this bill?");
     if (confirmation) {
       this.model.destroy();
       this.remove();
       Backbone.history.navigate("", {trigger: true});
     }
-  }
+  },
+
 });
