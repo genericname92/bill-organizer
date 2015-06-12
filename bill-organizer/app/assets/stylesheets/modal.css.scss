@@ -1,0 +1,21 @@
+.m-content {
+  z-index: 101;
+  background-color: white;
+  border-radius: 3px;
+  padding: 20px;
+  height: 400px;
+  width: 564px;
+  position: fixed;
+  /* margin: 0 auto; */
+  margin-top: 66px;
+  left: 25%;
+}
+.m-backdrop {
+  position: absolute;
+  background-color: rgba(170, 169, 176, .5);
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 68;
+}

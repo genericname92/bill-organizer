@@ -6,6 +6,8 @@ BillOrganizer.Views.RoommatesNew = Backbone.View.extend({
   },
 
   events: {
+    'click .close': 'remove',
+    'click .m-backdrop': 'remove',
     "submit form": "submit"
   },
 
@@ -18,15 +20,13 @@ BillOrganizer.Views.RoommatesNew = Backbone.View.extend({
   submit: function(event){
     event.preventDefault();
     var attrs = $(event.currentTarget).serializeJSON();
-    var bill = this.model.bill;
     this.model.set(attrs);
     this.model.save({},
       {
         wait: true,
         success: function(){
           this.collection.add(this.model, {merge: true});
-          this.model = new BillOrganizer.Models.Roommate({bill: bill});
-          this.render();
+          this.remove();
         }.bind(this),
         error: function(model, response){
           $('.errors').empty();

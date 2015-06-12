@@ -1,46 +1,50 @@
-<div class="row">
-  <ul class="errors">
-  </ul>
-  <form role="form">
-    <div class="form-group">
-      <label>Email:
-        <input
-          class="form-control"
-          type="text"
-          name="email"
-          value="<%=roommate.escape("email")%>"
-        >
-      </label>
-    </div>
-    <div class="form-group">
-    <b>This Roommate lived here between:</b>
-    </div>
-    <div class="form-group">
-      <label> Start:
-        <input
-        class="form-control"
-        type="date"
-        name="from_date"
-        value="<%=roommate.escape("from_date")%>"
-        >
-      </label>
-    </div>
-    <div class="form-group">
-      <label> End:
-        <input
+<div class="m-backdrop"></div>
+
+<div class="m-content">
+  <div class="row">
+    <ul class="errors">
+    </ul>
+    <form role="form">
+      <div class="form-group">
+        <label>Email:
+          <input
+            class="form-control"
+            type="text"
+            name="email"
+            value="<%=roommate.escape("email")%>"
+          >
+        </label>
+      </div>
+      <div class="form-group">
+      <b>This Roommate lived here between:</b>
+      </div>
+      <div class="form-group">
+        <label> Start:
+          <input
           class="form-control"
           type="date"
-          name="end_date"
-          value="<%=roommate.escape("end_date")%>"
+          name="from_date"
+          value="<%=roommate.escape("from_date")%>"
+          >
+        </label>
+      </div>
+      <div class="form-group">
+        <label> End:
+          <input
+            class="form-control"
+            type="date"
+            name="end_date"
+            value="<%=roommate.escape("end_date")%>"
+          >
+        </label>
+      </div>
+      <div class="form-group">
+        <input
+          class="btn btn-default"
+          type="submit"
+          value="<%=formType%> a Roommate!"
         >
-      </label>
-    </div>
-    <div class="form-group">
-      <input
-        class="btn btn-default"
-        type="submit"
-        value="<%=formType%> a Roommate!"
-      >
-    </div>
-  </form>
+      </div>
+    </form>
+  </div>
 </div>

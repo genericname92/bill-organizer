@@ -8,7 +8,7 @@ BillOrganizer.Views.BillShow = Backbone.CompositeView.extend({
     this.model.roommates().each(function(roommate){
       this.addRoommate(roommate);
     }.bind(this));
-    this.addRoommateForm();
+    // this.addRoommateForm();
   },
   addRoommate: function(roommate){
     var view = new BillOrganizer.Views.RoommateItem({

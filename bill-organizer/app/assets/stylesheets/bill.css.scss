@@ -4,6 +4,7 @@
 }
 
 .billShowContainer {
+  margin-left: 15px;
   button {
     margin: 20px 10px 0 10px;
   }
@@ -15,11 +16,25 @@
     width: 100%;
     font-size: 24px;
     border: 1px solid black;
-    td th tr {
-      border: 1px solid black;
+    border-radius: 4px;
+    tbody {
+      tr {
+        border: 1px solid black;
+        th {
+          border-right: 1px solid black;
+        }
+        td {
+          padding-left: 30px;
+        }
+      }
+      tr:nth-child(2n){
+        background-color: lavenderblush;
+      }
+
     }
   }
 }
+
 
 .billDetails {
   width: 100%;

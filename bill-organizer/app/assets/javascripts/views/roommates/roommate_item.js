@@ -51,11 +51,23 @@ BillOrganizer.Views.RoommateItem = Backbone.View.extend({
     }
   },
 
-  editRoommate: function(){
-    var bd = $('<div class="modal-backdrop"></div>');
-    bd.appendTo(document.body);
-    setTimeout(function(){
-      bd.remove();
-    }, 2000);
+  editRoommate: function(event){
+    var modal = new BillOrganizer.Views.RoommatesNew({
+      model: this.model,
+      formType: "Edit",
+      collection: this.model.collection
+    });
+    $('body').prepend(modal.render().$el);
+    // var bd = $('<div class="modal-backdrop"></div>');
+    // bd.appendTo(document.querySelector(".backdrop"));
+    // var form = new BillOrganizer.Views.RoommatesNew({
+    //   model: this.model,
+    //   formType: "Edit"
+    // });
+    // $('.content').html(form.render().$el);
+    // setTimeout(function(){
+    //   bd.remove();
+    //   form.remove();
+    // }, 2000);
   }
 });
