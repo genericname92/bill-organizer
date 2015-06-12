@@ -18,6 +18,7 @@
 //= require jquery.serializejson
 //= require composite_view
 //= require bill_organizer
+//= require_tree ./utils
 //= require_tree ../templates
 //= require_tree ./models
 //= require_tree ./collections

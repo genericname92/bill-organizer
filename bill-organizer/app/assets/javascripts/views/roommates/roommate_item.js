@@ -1,8 +1,10 @@
 BillOrganizer.Views.RoommateItem = Backbone.View.extend({
   template: JST["roommates/item"],
   className: "SingleRoommate group",
-  initialize: function () {
+  initialize: function (options) {
     this.listenTo(this.model, 'change sync', this.render);
+    this.listenTo(this.model.collection.bill, 'sync', this.render);
+    this.calculator = options.calculator;
   },
 
   events: {
@@ -18,15 +20,22 @@ BillOrganizer.Views.RoommateItem = Backbone.View.extend({
     } else {
       this.$el.addClass("unpaidRoommate").removeClass("paidRoommate");
     }
-    var content = this.template({roommate: this.model, checked: checked});
+    var days = this.calculator.relevantDays(this.model);
+    var owedAmount = this.calculator.owedAmount(this.model);
+    var content = this.template({
+      roommate: this.model,
+      checked: checked,
+      days: days,
+      owedAmount: owedAmount
+    });
     this.$el.html(content);
     return this;
   },
 
   getPaid: function (event) {
     this.togglePaid();
-    this.model.save({}
-    ,{
+    this.model.save( {},
+    {
       wait: true,
       success: function () {
         this.model.collection.bill.roommates().add(this.model, {merge: true});

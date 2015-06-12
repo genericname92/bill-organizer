@@ -4,14 +4,18 @@ BillOrganizer.Views.BillShow = Backbone.CompositeView.extend({
     this.listenTo(this.model, 'sync', this.render);
     this.listenTo(this.model.roommates(), "add", this.addRoommate);
     this.listenTo(this.model.roommates(), "remove", this.removeRoommate);
+    this.calculator = new BillOrganizer.Calculator(this.model);
     this.model.roommates().each(function(roommate){
       this.addRoommate(roommate);
     }.bind(this));
     this.addRoommateForm();
   },
   addRoommate: function(roommate){
-    var view = new BillOrganizer.Views.RoommateItem({model: roommate});
-    this.addSubview('.roommateContainer', view, true);
+    var view = new BillOrganizer.Views.RoommateItem({
+      model: roommate,
+      calculator: this.calculator
+    });
+    this.addSubview('.roommateContainer', view);
   },
 
   removeRoommate: function(roommate){

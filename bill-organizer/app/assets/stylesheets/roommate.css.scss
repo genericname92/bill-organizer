@@ -1,0 +1,44 @@
+.roommateContainer {
+  label {
+    float: left;
+    margin-top: 10px;
+    position: relative;
+  }
+
+  button {
+    margin-top: 10px;
+    position: relative;
+  }
+}
+
+.roommateAttrs {
+  float: right;
+  li {
+    list-style: none;
+  }
+}
+
+.SingleRoommate {
+  margin-bottom: 5px;
+  border: 1px solid black;
+}
+
+.paidRoommate{
+  opacity: 0.5;
+  background-color: "linen"
+}
+
+.unpaidRoommate{
+  opacity: 1;
+}
+
+
+.roommateShowContainer {
+  width: 30%;
+  float: right;
+}
+
+.modal-backdrop {
+  background-color: #ccc;
+  opacity: 0.5;
+}

@@ -5,12 +5,29 @@
   <button
     class="deleteBill btn btn-danger pull-left btn-group btn-group-sm glyphicon glyphicon-remove-sign"
           type=button></button>
-<div class="billDetails"> Bill Details:
-  <li>Type: <%= bill.escape("bill_type") %> </li><br>
-  <li>Amount: <%= bill.escape("amount") %> </li><br>
-  <li>From: <%= bill.escape("from_date") %> </li><br>
-  <li>To: <%= bill.escape("end_date") %> </li><br>
-  <li> Updated at: <%= date %> </li><br>
+<div class="billDetails">
+  <h2>Bill Details: </h2>
+  <table>
+    <tr>
+      <th>Type:</th>
+      <td><%= bill.escape("bill_type") %> </td>
+    </tr>
+    <tr>
+      <th>Amount:</th>
+      <td><%= bill.escape("amount") %> </td>
+    </tr>
+    <tr>
+      <th>From:</th>
+      <td><%= bill.escape("from_date") %> </td>
+    </tr>
+    <tr>
+      <th>To:</th>
+      <td><%= bill.escape("end_date") %></td>
+    <tr>
+      <th>Updated at:</th>
+      <td><%= date %> </td>
+    </tr>
+  </table>
 </div>
 </div>
 <div class="roommateShowContainer group">

@@ -1,13 +1,15 @@
 <button class="editRoommate pull-left btn-group btn-group-sm glyphicon glyphicon-pencil"
   type=button></button>
-  <label> Paid?
-    <input class="paidBox pull-left" type="checkbox" <%=checked%> >
-  </label>
-<ul class="roommateAttrs">
+<div class="paidBox pull-left"> Owes $<%=owedAmount%> :  Paid?
+    <input type="checkbox" <%=checked%> >
+<div>
+<div class="roommateAttrs">
   <li> Email: <%= roommate.escape("email") %></li>
   <li>
     <%= roommate.escape("from_date") %>
     ->
     <%= roommate.escape("end_date") %>
+
+    (  <%= days %> relevant days )
   </li>
-</ul>
+</div>
