@@ -16,7 +16,12 @@
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
-
+ul {
+  list-style-type: none;
+}
+li {
+  list-style-type: none;
+}
 
  .group:after {
    content: "";

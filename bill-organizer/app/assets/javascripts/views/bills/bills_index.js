@@ -1,6 +1,7 @@
 BillOrganizer.Views.BillsIndex = Backbone.CompositeView.extend({
 
   template: JST['bills/index'],
+  className: "billIndex col-md-6 col-md-offset-3",
 
   initialize: function(){
     this.listenTo(this.collection, 'delete sync', this.render);
@@ -19,6 +20,9 @@ BillOrganizer.Views.BillsIndex = Backbone.CompositeView.extend({
     var content = this.template();
     this.$el.html(content);
     this.attachSubviews();
+    for (var i = 0; i < 3; i++){
+      $('.billList').append($('<li></li>'));
+    }
     return this;
   },
 
