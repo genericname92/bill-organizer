@@ -20,9 +20,6 @@ BillOrganizer.Views.BillsIndex = Backbone.CompositeView.extend({
     var content = this.template();
     this.$el.html(content);
     this.attachSubviews();
-    for (var i = 0; i < 3; i++){
-      $('.billList').append($('<li></li>'));
-    }
     return this;
   },
 

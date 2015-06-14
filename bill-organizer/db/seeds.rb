@@ -10,6 +10,23 @@ ele = Bill.create!(
   from_date: Time.now - 1.years,
   end_date: Time.now
 )
+ele2 = Bill.create!(
+  owner_id: guest_user.id,
+  title: "June Water",
+  bill_type: "Water",
+  amount: 115.42,
+  from_date: Time.now - 1.months,
+  end_date: Time.now
+)
+
+ele3 = Bill.create!(
+  owner_id: guest_user.id,
+  title: "June Sewage",
+  bill_type: "Sewage",
+  amount: 45.42,
+  from_date: Time.now - 1.months,
+  end_date: Time.now
+)
 
 Roommate.create!(
   bill_id: ele.id,
