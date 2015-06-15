@@ -281,14 +281,15 @@ Table of Contents
 	-moz-transition-timing-function: ease;
 	transition-timing-function: ease;
 
-	#turnPage {
-		-webkit-transform: rotateY(-120deg);
-		-moz-transform: rotateY(-120deg);
-		transform: rotateY(-120deg);
-		-webkit-transition-duration: 1.5s;
-		-moz-transition-duration: 1.5s;
-		transition-duration: 1.5s;
-	}
+
+}
+.ruled_paper .turnPage {
+	-webkit-transform: rotateY(-120deg);
+	-moz-transform: rotateY(-120deg);
+	transform: rotateY(-120deg);
+	-webkit-transition-duration: 1.5s;
+	-moz-transition-duration: 1.5s;
+	transition-duration: 1.5s;
 }
 
 .ruled_paper li:nth-child(1) {
@@ -332,50 +333,50 @@ Table of Contents
 	z-index: 0;
 }
 
-.book:hover > .ruled_paper li:nth-child(1) {
-	-webkit-transform: rotateY(-30deg);
-	-moz-transform: rotateY(-30deg);
-	transform: rotateY(-30deg);
-	-webkit-transition-duration: 1.5s;
-	-moz-transition-duration: 1.5s;
-	transition-duration: 1.5s;
-}
-
-.book:hover > .ruled_paper li:nth-child(2) {
-	-webkit-transform: rotateY(-35deg);
-	-moz-transform: rotateY(-35deg);
-	transform: rotateY(-35deg);
-	-webkit-transition-duration: 1.8s;
-	-moz-transition-duration: 1.8s;
-	transition-duration: 1.8s;
-}
-
-.book:hover > .ruled_paper li:nth-child(3) {
-	-webkit-transform: rotateY(-110deg);
-	-moz-transform: rotateY(-110deg);
-	transform: rotateY(-110deg);
-	-webkit-transition-duration: 2.2s;
-	-moz-transition-duration: 2.2s;
-	transition-duration: 2.2s;
-}
-
-.book:hover > .ruled_paper li:nth-child(4) {
-	-webkit-transform: rotateY(-115deg);
-	-moz-transform: rotateY(-115deg);
-	transform: rotateY(-115deg);
-	-webkit-transition-duration: 1.8s;
-	-moz-transition-duration: 1.8s;
-	transition-duration: 1.8s;
-}
-
-.book:hover > .ruled_paper li:nth-child(5) {
-	-webkit-transform: rotateY(-120deg);
-	-moz-transform: rotateY(-120deg);
-	transform: rotateY(-120deg);
-	-webkit-transition-duration: 1.2s;
-	-moz-transition-duration: 1.2s;
-	transition-duration: 1.2s;
-}
+// .book:hover > .ruled_paper li:nth-child(1) {
+// 	-webkit-transform: rotateY(-30deg);
+// 	-moz-transform: rotateY(-30deg);
+// 	transform: rotateY(-30deg);
+// 	-webkit-transition-duration: 1.5s;
+// 	-moz-transition-duration: 1.5s;
+// 	transition-duration: 1.5s;
+// }
+//
+// .book:hover > .ruled_paper li:nth-child(2) {
+// 	-webkit-transform: rotateY(-35deg);
+// 	-moz-transform: rotateY(-35deg);
+// 	transform: rotateY(-35deg);
+// 	-webkit-transition-duration: 1.8s;
+// 	-moz-transition-duration: 1.8s;
+// 	transition-duration: 1.8s;
+// }
+//
+// .book:hover > .ruled_paper li:nth-child(3) {
+// 	-webkit-transform: rotateY(-110deg);
+// 	-moz-transform: rotateY(-110deg);
+// 	transform: rotateY(-110deg);
+// 	-webkit-transition-duration: 2.2s;
+// 	-moz-transition-duration: 2.2s;
+// 	transition-duration: 2.2s;
+// }
+//
+// .book:hover > .ruled_paper li:nth-child(4) {
+// 	-webkit-transform: rotateY(-115deg);
+// 	-moz-transform: rotateY(-115deg);
+// 	transform: rotateY(-115deg);
+// 	-webkit-transition-duration: 1.8s;
+// 	-moz-transition-duration: 1.8s;
+// 	transition-duration: 1.8s;
+// }
+//
+// .book:hover > .ruled_paper li:nth-child(5) {
+// 	-webkit-transform: rotateY(-120deg);
+// 	-moz-transform: rotateY(-120deg);
+// 	transform: rotateY(-120deg);
+// 	-webkit-transition-duration: 1.2s;
+// 	-moz-transition-duration: 1.2s;
+// 	transition-duration: 1.2s;
+// }
 
 /* Cover colors */
 .green {

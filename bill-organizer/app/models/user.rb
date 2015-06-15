@@ -22,6 +22,20 @@ class User < ActiveRecord::Base
     foreign_key: :owner_id
   )
 
+  has_many(
+    :taggings,
+    class_name: "Follow",
+    primary_key: :id,
+    foreign_key: :user_id
+  )
+
+  has_many(
+    :tagged_bills,
+    through: :taggings,
+    source: :bill,
+
+  )
+
   attr_reader :password
   after_initialize :ensure_session_token
 

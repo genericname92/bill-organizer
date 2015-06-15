@@ -34,9 +34,15 @@ module Api
 
     def index
       @bills = current_user.bills
-      render json: @bills
+      @tagged_bills = current_user.tagged_bills
+      render json: @bills.push(@tagged_bills)
     end
 
+    def unseen_tagged_bills
+      @bills = current_user.tagged_bills.includes(:follows).where("viewed=false")
+      @notifications = current_user.taggings.where("viewed=false")
+      render :notifications
+    end
     def show
       @bill = Bill.find(params[:id])
       render :show

@@ -1,13 +1,19 @@
-<button
-  class="killRoommate close" title="Delete this person!">&times;
-</button>
-<button
-  class="editRoommate pull-left btn-group btn-group-sm glyphicon glyphicon-pencil"
-  type=button
-  title="Edit Roommate!">
-</button>
+<% if (window.CURRENT_USER_ID === parseInt(roommate.collection.bill.escape("owner_id"))){ %>
+  <button
+    class="killRoommate close" title="Delete this person!">&times;
+  </button>
+  <button
+    class="editRoommate pull-left btn-group btn-group-sm glyphicon glyphicon-pencil"
+    type=button
+    title="Edit Roommate!">
+  </button>
+<% } %>
 <div class="paidBox pull-left"> Owes $<%=owedAmount%> :  Paid?
-    <input type="checkbox" <%=checked%> >
+    <input type="checkbox" <%=checked%>
+      <% if (window.CURRENT_USER_ID !== parseInt(roommate.collection.bill.escape("owner_id"))){ %>
+      disabled="disabled"
+      <% } %>
+    >
 <div>
 <div class="roommateAttrs">
   <li> Email: <%= roommate.escape("email") %></li>

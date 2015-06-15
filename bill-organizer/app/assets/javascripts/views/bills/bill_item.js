@@ -1,11 +1,11 @@
 BillOrganizer.Views.BillItem = Backbone.View.extend({
   template: JST["bills/bill_item"],
   tagName: "li",
-  className: "billItem",
+  className: "billItem group",
 
   events: {
     "click .deleteBill": "destroyBill",
-    "click .next": "turnPage"
+    "click .turnPage": "turnPage",
   },
 
   initialize: function(){
@@ -33,8 +33,9 @@ BillOrganizer.Views.BillItem = Backbone.View.extend({
   },
 
   turnPage: function(event){
-    $(event.currentTarget.parentElement).attr('id', 'turnPage');
-  }
+    console.log("got there");
+    $(event.currentTarget.parentElement).addClass('activePage');
+  },
 
 
 });

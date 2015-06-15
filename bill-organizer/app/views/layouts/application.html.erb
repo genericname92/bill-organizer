@@ -15,6 +15,7 @@
   <% if current_user %>
   <script>
     window.CURRENT_USER_ID = <%=current_user.id %>;
+    window.CURRENT_USER_EMAIL = "<%=current_user.email %>";
   </script>
   <% end %>
 <%= yield %>

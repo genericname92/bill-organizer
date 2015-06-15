@@ -1,7 +1,7 @@
 BillOrganizer.Views.BillsIndex = Backbone.CompositeView.extend({
 
   template: JST['bills/index'],
-  className: "billIndex col-md-6 col-md-offset-3",
+  className: "billIndex",
 
   initialize: function(){
     this.listenTo(this.collection, 'delete sync', this.render);

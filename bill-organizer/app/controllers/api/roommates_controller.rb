@@ -3,6 +3,10 @@ module Api
     def create
       @roommate = Roommate.new(roommate_params.merge!(bill_id: params[:bill][:id]))
       if @roommate.save
+        tagged = User.find_by(email: @roommate.email)
+        if (tagged)
+          Follow.create!(user_id: tagged.id, bill_id: @roommate.bill.id);
+        end
         render json: @roommate, status: 200
       else
         render json: @roommate.errors.full_messages, status: :unprocessable_entity
