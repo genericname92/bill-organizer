@@ -139,11 +139,24 @@ Table of Contents
 	border-radius: 0px 10px 10px 0px;
 	position: relative;
 	a {
-		left: 20px;
-		top: 20px;
+		margin: 0 auto;
+		left: 10%;
+		top: 40%;
 		position: absolute;
 	}
+	.date {
+		position: absolute;
+		margin: 0 auto;
+		top: 50%;
+		left: 10%;
+	}
+	.next {
+		position: relative;
+	  left: 270px;
+	  top: 200px;
+	}
 }
+
 
 /*
 	3. opening cover, back cover and pages
@@ -267,6 +280,15 @@ Table of Contents
 	-webkit-transition-timing-function: ease;
 	-moz-transition-timing-function: ease;
 	transition-timing-function: ease;
+
+	.turnPage {
+		-webkit-transform: rotateY(-30deg);
+		-moz-transform: rotateY(-30deg);
+		transform: rotateY(-30deg);
+		-webkit-transition-duration: 1.5s;
+		-moz-transition-duration: 1.5s;
+		transition-duration: 1.5s;
+	}
 }
 
 .ruled_paper li:nth-child(1) {

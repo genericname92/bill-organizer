@@ -4,7 +4,8 @@ BillOrganizer.Views.BillItem = Backbone.View.extend({
   className: "billItem",
 
   events: {
-    "click .deleteBill": "destroyBill"
+    "click .deleteBill": "destroyBill",
+    "click .next": "turnPage"
   },
 
   initialize: function(){
@@ -12,7 +13,13 @@ BillOrganizer.Views.BillItem = Backbone.View.extend({
   },
 
   render: function(){
-    var content = this.template({bill: this.model});
+    var monthNames = ["January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+    ];
+    var updatedAt = new Date(this.model.escape("updated_at"));
+    var date = monthNames[parseInt(updatedAt.getMonth())] +
+      " " + updatedAt.getDate() + ", " + updatedAt.getFullYear();
+    var content = this.template({bill: this.model, date: date});
     this.$el.html(content);
     return this;
   },
@@ -23,6 +30,10 @@ BillOrganizer.Views.BillItem = Backbone.View.extend({
       this.model.destroy();
       this.remove();
     }
+  },
+
+  turnPage: function(event){
+    $(event.currentTarget.parentElement).addClass('turnPage');
   }
 
 
