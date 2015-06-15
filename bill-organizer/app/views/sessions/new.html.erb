@@ -1,3 +1,6 @@
+<h1 class="main_title"> Bill Organizer </h1>
+
+<div class="sign_in">
 <h1>Sign In</h1>
 
 <form action="/session" method="post">
@@ -7,7 +10,7 @@
   </label><br>
   <label>Password<br>
     <input name="user[password]" type="password"><br>
-  </label><br>
+  </label><br><br>
   <input type="submit" value="Submit" class="btn btn-primary"><br>
 </form>
 <br>
@@ -21,3 +24,16 @@
 <br>
 <br>
 No account? Sign up <a href="<%=new_user_url%>">here!</a>
+
+</div>
+
+<div class="description">
+  Welcome to Bill Organizer!
+  This web application is a free service that
+  helps you split household bills with
+  your roommates based on time spent in residence.
+  Bill data will persist until the creator deletes it,
+  and can be viewed by anyone given the unique link.
+  If you wish to test out the application,
+  feel free to sign in as a guest and test out the features!
+</div>
