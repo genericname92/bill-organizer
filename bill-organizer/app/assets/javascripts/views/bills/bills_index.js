@@ -23,5 +23,4 @@ BillOrganizer.Views.BillsIndex = Backbone.CompositeView.extend({
     return this;
   },
 
-
 });

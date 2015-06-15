@@ -33,7 +33,7 @@ BillOrganizer.Views.BillItem = Backbone.View.extend({
   },
 
   turnPage: function(event){
-    $(event.currentTarget.parentElement).addClass('turnPage');
+    $(event.currentTarget.parentElement).attr('id', 'turnPage');
   }
 
 

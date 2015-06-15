@@ -281,10 +281,10 @@ Table of Contents
 	-moz-transition-timing-function: ease;
 	transition-timing-function: ease;
 
-	.turnPage {
-		-webkit-transform: rotateY(-30deg);
-		-moz-transform: rotateY(-30deg);
-		transform: rotateY(-30deg);
+	#turnPage {
+		-webkit-transform: rotateY(-120deg);
+		-moz-transform: rotateY(-120deg);
+		transform: rotateY(-120deg);
 		-webkit-transition-duration: 1.5s;
 		-moz-transition-duration: 1.5s;
 		transition-duration: 1.5s;
@@ -332,7 +332,7 @@ Table of Contents
 	z-index: 0;
 }
 
-/*.book:hover > .ruled_paper li:nth-child(1) {
+.book:hover > .ruled_paper li:nth-child(1) {
 	-webkit-transform: rotateY(-30deg);
 	-moz-transform: rotateY(-30deg);
 	transform: rotateY(-30deg);
@@ -376,7 +376,7 @@ Table of Contents
 	-moz-transition-duration: 1.2s;
 	transition-duration: 1.2s;
 }
-*/
+
 /* Cover colors */
 .green {
 	background: #2ecc71;
