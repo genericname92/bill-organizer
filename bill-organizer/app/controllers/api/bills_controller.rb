@@ -38,7 +38,7 @@ module Api
     def index
       @bills = current_user.bills
       @tagged_bills = current_user.tagged_bills
-      render json: @bills.push(@tagged_bills)
+      render json: @bills + @tagged_bills
     end
 
     def unseen_tagged_bills
