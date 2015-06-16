@@ -1,7 +1,7 @@
 <div class="row">
   <ul class="errors">
   </ul>
-  <form class="col-md-3 col-md-offset-6" role="form">
+  <form class="col-md-offset-4" role="form">
     <div class="form-group">
       <label>Bill Name
         <input
@@ -12,10 +12,21 @@
         >
       </label>
     </div>
+    <div class="type_buttons">
+      <div>Select from some common types or just type in your own</div><br>
+      <div>
+        <button type="button" class="Electricity">Electricity</button>
+        <button type="button" class="Water">Water</button>
+        <button type="button" class="Gas">Gas</button>
+        <button type="button" class="Internet">Internet</button>
+        <button type="button" class="Utilities">Utilities</button>
+        <button type="button" class="Rent">Rent</button>
+      </div><br>
+    </div>
     <div class="form-group">
       <label>Bill Type
         <input
-          class="form-control"
+          class="form-control bill_type"
           type="text"
           name="bill_type"
           value="<%=bill.escape("bill_type")%>"
