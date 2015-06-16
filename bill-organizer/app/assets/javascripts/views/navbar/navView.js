@@ -17,10 +17,20 @@ BillOrganizer.Views.NavView = Backbone.CompositeView.extend({
     this.addSubview('.notifications', view);
   },
 
+  events: {
+    "submit .searchBar": "search"
+  },
   render: function(){
     var content = this.template({followBills: this.followBills});
     this.$el.html(content);
     this.attachSubviews();
     return this;
+  },
+
+  search: function(event){
+    event.preventDefault();
+    var form = $(event.currentTarget).serializeJSON();
+    var searchString = form.searchString;
+    Backbone.history.navigate("#bills/"+searchString);
   }
 });

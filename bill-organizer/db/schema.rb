@@ -11,20 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150615142201) do
+ActiveRecord::Schema.define(version: 20150616020201) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "bills", force: :cascade do |t|
     t.integer  "owner_id"
-    t.string   "title",                              null: false
+    t.string   "title",                               null: false
     t.string   "bill_type"
-    t.decimal  "amount",     precision: 8, scale: 2
-    t.date     "from_date",                          null: false
-    t.date     "end_date",                           null: false
-    t.datetime "created_at",                         null: false
-    t.datetime "updated_at",                         null: false
+    t.decimal  "amount",      precision: 8, scale: 2
+    t.date     "from_date",                           null: false
+    t.date     "end_date",                            null: false
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+    t.string   "show_string"
   end
 
   create_table "follows", force: :cascade do |t|

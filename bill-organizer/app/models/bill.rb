@@ -2,15 +2,16 @@
 #
 # Table name: bills
 #
-#  id         :integer          not null, primary key
-#  owner_id   :integer
-#  title      :string           not null
-#  bill_type  :string
-#  amount     :decimal(8, 2)
-#  from_date  :date             not null
-#  end_date   :date             not null
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
+#  id          :integer          not null, primary key
+#  owner_id    :integer
+#  title       :string           not null
+#  bill_type   :string
+#  amount      :decimal(8, 2)
+#  from_date   :date             not null
+#  end_date    :date             not null
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#  show_string :string
 #
 
 class Bill < ActiveRecord::Base
@@ -25,10 +26,15 @@ class Bill < ActiveRecord::Base
     primary_key: "id",
     foreign_key: "owner_id",
   )
+  after_initialize :ensure_show_string
 
   def date_durations
     if from_date - end_date > 0
       errors.add(:duration, "End date cannot be before Start Date")
     end
+  end
+
+  def ensure_show_string
+    self.show_string ||= SecureRandom.urlsafe_base64(8)
   end
 end
