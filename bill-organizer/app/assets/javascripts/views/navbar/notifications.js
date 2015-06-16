@@ -17,5 +17,6 @@ BillOrganizer.Views.Notifications = Backbone.View.extend({
     var notification = bill.notifications().first();
     notification.set({"viewed": true});
     notification.save({});
+    this.remove();
   }
 });

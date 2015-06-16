@@ -31,6 +31,6 @@ BillOrganizer.Views.NavView = Backbone.CompositeView.extend({
     event.preventDefault();
     var form = $(event.currentTarget).serializeJSON();
     var searchString = form.searchString;
-    Backbone.history.navigate("#bills/"+searchString);
+    Backbone.history.navigate("#bills/"+searchString, { trigger: true });
   }
 });

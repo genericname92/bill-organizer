@@ -6,9 +6,12 @@ window.BillOrganizer = {
   initialize: function() {
     BillOrganizer.bills = new BillOrganizer.Collections.Bills();
     BillOrganizer.bills.fetch();
+    BillOrganizer.taggedBills = new BillOrganizer.Collections.Bills();
+    BillOrganizer.taggedBills.fetch({data: {taggedBills: true} });
     var router = new BillOrganizer.Routers.Router({
       $rootEl: $('#main'),
-      collection: BillOrganizer.bills
+      collection: BillOrganizer.bills,
+      taggedBills: BillOrganizer.taggedBills
     });
     var navbar = new BillOrganizer.Views.NavView({
       router: router,

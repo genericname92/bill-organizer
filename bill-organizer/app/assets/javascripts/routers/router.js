@@ -2,6 +2,7 @@ BillOrganizer.Routers.Router = Backbone.Router.extend({
   initialize: function(options){
     this.$rootEl = options.$rootEl;
     this.collection = options.collection;
+    this.taggedBills = options.taggedBills;
   },
 
   _swapView: function(view) {
@@ -20,7 +21,7 @@ BillOrganizer.Routers.Router = Backbone.Router.extend({
 
   index: function() {
     this.collection.sort();
-    var view = new BillOrganizer.Views.BillsIndex({collection: this.collection});
+    var view = new BillOrganizer.Views.BillsIndex({collection: this.collection, taggedBills: this.taggedBills});
     this._swapView(view);
   },
 
