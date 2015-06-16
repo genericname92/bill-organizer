@@ -6,7 +6,8 @@ BillOrganizer.Views.BillForm = Backbone.View.extend({
     this.formType = options.formType;
   },
   events: {
-    "submit form": "submit"
+    "submit form": "submit",
+    "click .type_buttons button": "fillType"
   },
 
   render: function(){
@@ -35,6 +36,10 @@ BillOrganizer.Views.BillForm = Backbone.View.extend({
         }.bind(this));
       }
     });
+  },
 
+  fillType: function(event){
+    var value = event.currentTarget.value;
+    $('.bill_type').val(value);
   }
 });

@@ -15,12 +15,12 @@
     <div class="type_buttons">
       <div>Select from some common types or just type in your own</div><br>
       <div>
-        <button type="button" class="Electricity">Electricity</button>
-        <button type="button" class="Water">Water</button>
-        <button type="button" class="Gas">Gas</button>
-        <button type="button" class="Internet">Internet</button>
-        <button type="button" class="Utilities">Utilities</button>
-        <button type="button" class="Rent">Rent</button>
+        <button type="button" class="Electricity" value="Electricity">Electricity</button>
+        <button type="button" class="Water" value="Water">Water</button>
+        <button type="button" class="Gas" value="Gas">Gas</button>
+        <button type="button" class="Internet" value="Internet">Internet</button>
+        <button type="button" class="Utilities" value="Utilities">Utilities</button>
+        <button type="button" class="Rent" value="Rent">Rent</button>
       </div><br>
     </div>
     <div class="form-group">
@@ -29,6 +29,7 @@
           class="form-control bill_type"
           type="text"
           name="bill_type"
+          placeholder="Electricity"
           value="<%=bill.escape("bill_type")%>"
         >
       </label>
