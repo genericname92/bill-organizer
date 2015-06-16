@@ -34,7 +34,8 @@ BillOrganizer.Views.BillShow = Backbone.CompositeView.extend({
   events: {
     "click .editBill": "edit",
     "click .deleteBill": "destroyBill",
-    "click .roommateNew": "addRoommateForm"
+    "click .roommateNew": "addRoommateForm",
+    "click .invoice": "sendMail"
   },
   render: function(){
     var date = "";
@@ -79,5 +80,12 @@ BillOrganizer.Views.BillShow = Backbone.CompositeView.extend({
       Backbone.history.navigate("", {trigger: true});
     }
   },
+
+  sendMail: function(){
+    var modal = new BillOrganizer.Views.MailPreview({
+      model: this.model
+    });
+    $('body').prepend(modal.render().$el);    
+  }
 
 });

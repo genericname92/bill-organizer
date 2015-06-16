@@ -1,0 +1,23 @@
+
+<div class="m-backdrop"></div>
+
+<div class="m-content">
+  <button class="close">&times;</button>
+  <h1>Greetings from Bill Organizer!</h1>
+
+  <p>
+    Your (hopefully) friend has created a bill and tagged you as a party in it.
+  </p>
+  <p>
+    You can view the bill details at https://bill-organizer.herokuapp.com/#bills/<%=bill.id%>
+  </p>
+  <p>
+    The bill states that you owe: $(OWED_AMOUNT)
+  </p>
+  <p>
+    If you do not think this email applies to you, please ignore it!
+  </p>
+
+  <button type="button" class="sendMail">Send Mail!</button>
+  </div>
+</div>

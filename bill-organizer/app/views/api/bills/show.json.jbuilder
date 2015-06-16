@@ -12,12 +12,5 @@ json.extract!(
 )
 
 json.roommates @bill.roommates do |roommate|
-  json.id roommate.id
-  json.bill_id roommate.bill_id
-  json.email roommate.email
-  json.paid roommate.paid
-  json.from_date roommate.from_date
-  json.end_date roommate.end_date
-  json.created_at roommate.created_at
-  json.updated_at roommate.updated_at
+  json.extract! roommate, :id, :bill_id, :email, :paid, :from_date, :end_date, :created_at, :updated_at
 end
