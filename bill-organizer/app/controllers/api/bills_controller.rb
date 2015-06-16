@@ -28,6 +28,9 @@ module Api
 
     def destroy
       @bill = current_user.bills.find(params[:id])
+      @bill.follows.each do |follow|
+        follow.try(destroy)
+      end
       @bill.try(:destroy)
       render json: {}
     end

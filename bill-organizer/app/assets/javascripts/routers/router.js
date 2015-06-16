@@ -12,6 +12,7 @@ BillOrganizer.Routers.Router = Backbone.Router.extend({
 
   routes: {
     "": "index",
+    "bills": "index",
     "bills/new": "new",
     "bills/:id": "show",
     "bills/:id/edit": "edit"

@@ -12,7 +12,6 @@ window.BillOrganizer = {
     });
     var navbar = new BillOrganizer.Views.NavView({
       router: router,
-      collection: BillOrganizer.bills
     });
     $('#navbar').html(navbar.render().$el);
     Backbone.history.start();
