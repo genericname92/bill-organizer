@@ -51,5 +51,4 @@ BillOrganizer.Routers.Router = Backbone.Router.extend({
     });
     this._swapView(view);
   },
-
 });
