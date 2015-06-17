@@ -6,9 +6,14 @@ BillOrganizer.Views.BillsIndex = Backbone.CompositeView.extend({
   initialize: function(options){
     this.taggedBills = options.taggedBills;
     this.listenTo(this.collection, 'delete sync', this.render);
-    this.listenTo(this.collection, 'add', this.addBill);
     this.listenTo(this.taggedBills, "add", this.addTaggedBill);
-
+    if (this.collection.length === 0){
+      this.listenToOnce(this.collection,
+         'sync',
+         function(){
+            this.collection.each(this.addBill.bind(this))
+         });
+    }
     this.collection.each(this.addBill.bind(this));
     this.taggedBills.each(this.addTaggedBill.bind(this));
   },

@@ -36,7 +36,8 @@ BillOrganizer.Routers.Router = Backbone.Router.extend({
   },
 
   show: function(id) {
-    var bill = this.collection.getOrFetch(id);
+    var bill = new BillOrganizer.Models.Bill({id: id});
+    bill.fetch();
     var view = new BillOrganizer.Views.BillShow({model: bill});
     this._swapView(view);
   },

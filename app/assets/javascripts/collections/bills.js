@@ -4,7 +4,7 @@ BillOrganizer.Collections.Bills = Backbone.Collection.extend({
 
   comparator: function(bill){
     var dateObject = new Date(bill.escape('end_date'));
-    return dateObject.getTime();
+    return -dateObject.getTime();
   },
 
   getOrFetch: function(id){
