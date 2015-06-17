@@ -6,7 +6,6 @@
 //  background-image: url(http://2.bp.blogspot.com/-27YrInP8zxg/UC1Y_Ih2JvI/AAAAAAAAASs/ixJBEtbjWhM/s1600/Cork-Board.gif);
   color:#fff;
   width: 220%;
-  padding: 50px;
   position: relative;
   left: -300px;
   label {
@@ -15,17 +14,14 @@
     position: relative;
 
   }
-
-
-
 }
 
-.editRoommate {
-  margin-top: 10px;
+.roommateNew {
   position: relative;
+  right: 20%;
+  top: 25px;
 }
 .roommateAttrs {
-  float: right;
   li {
     list-style: none;
   }
@@ -51,28 +47,6 @@
 /* Opera */
 box-shadow: 5px 5px 7px rgba(33,33,33,.7);
 }
-
-// .SingleRoommate:nth-child(even) {
-//   -o-transform:rotate(-4deg);
-//   -webkit-transform:rotate(-4deg);
-//   -moz-transform:rotate(-4deg);
-//   position:relative;
-//   top:5px;
-// }
-// .SingleRoommate:nth-child(3n) {
-//   -o-transform:rotate(3deg);
-//   -webkit-transform:rotate(3deg);
-//   -moz-transform:rotate(3deg);
-//   position:relative;
-//   top:-5px;
-// }
-// .SingleRoommate:nth-child(5n) {
-//   -o-transform:rotate(-5deg);
-//   -webkit-transform:rotate(-5deg);
-//   -moz-transform:rotate(-5deg);
-//   position:relative;
-//   top:-10px;
-// }
 
 .paidRoommate{
   opacity: 0.5;
