@@ -14,14 +14,12 @@
       disabled="disabled"
       <% } %>
     >
-<div>
+</div>
 <div class="roommateAttrs">
+<br>
   <li> Email: <%= roommate.escape("email") %></li>
+  <br>
   <li>
-    <%= roommate.escape("from_date") %>
-    ->
-    <%= roommate.escape("end_date") %>
-
-    (  <%= days %> relevant days )
+    <%= days %> relevant days
   </li>
 </div>

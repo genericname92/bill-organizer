@@ -8,13 +8,13 @@
       title="Edit this bill!">
     </button>
     <button
-      class="deleteBill btn btn-danger pull-left btn-group btn-group-sm glyphicon glyphicon-remove-sign"
+      class="deleteBill close"
       type=button
-      title="Delete this bill!">
+      title="Delete this bill!">&times
     </button>
   <% } %>
 <div class="billDetails">
-  <table class="table table-hover table-striped table-bordered">
+  <table class="table table-striped table-bordered">
     <tr>
       <th>Type:</th>
       <td><%= bill.escape("bill_type") %> </td>
