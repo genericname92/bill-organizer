@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   resource :session
   namespace :api, defaults: {format: :json} do
     get 'bills/unseen_tagged_bills'
-    resources :bills, except: [:new, :edit]
+    resources :bills, except: [:new, :edit] do
+      post 'mail_to_people'
+    end
     resources :roommates, only: [:create, :update, :destroy]
     resources :follows, only: [:update, :destroy, :show]
   end

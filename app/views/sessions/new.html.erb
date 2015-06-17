@@ -1,39 +1,42 @@
-<h1 class="main_title"> Bill Organizer </h1>
+<div class="backdrop">
 
-<div class="sign_in">
-<h1>Sign In</h1>
+    <h1 class="main_title"> Bill Organizer </h1>
 
-<form action="/session" method="post">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <label>Email<br>
-    <input name="user[email]" type="text"><br>
-  </label><br>
-  <label>Password<br>
-    <input name="user[password]" type="password"><br>
-  </label><br><br>
-  <input type="submit" value="Submit" class="btn btn-primary"><br>
-</form>
-<br>
-<br>
-<form action="/session" method="post">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <input name="user[email]" type="hidden" value="guest">
-  <input name="user[password]" type="hidden" value="password">
-  <input type="submit" value="Sign In as Guest" class="btn btn-primary">
-</form>
-<br>
-<br>
-No account? Sign up <a href="<%=new_user_url%>">here!</a>
+    <div class="sign_in">
+    <h1>Sign In</h1>
 
-</div>
+    <form action="/session" method="post">
+      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+      <label>Email<br>
+        <input name="user[email]" type="text"><br>
+      </label><br>
+      <label>Password<br>
+        <input name="user[password]" type="password"><br>
+      </label><br><br>
+      <input type="submit" value="Submit" class="btn btn-primary"><br>
+    </form>
+    <br>
+    <br>
+    <form action="/session" method="post">
+      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+      <input name="user[email]" type="hidden" value="guest">
+      <input name="user[password]" type="hidden" value="password">
+      <input type="submit" value="Sign In as Guest" class="btn btn-primary">
+    </form>
+    <br>
+    <br>
+    No account? Sign up <a href="<%=new_user_url%>">here!</a>
 
-<div class="description">
-  Welcome to Bill Organizer!
-  This web application is a free service that
-  helps you split household bills with
-  your roommates based on time spent in residence.
-  Bill data will persist until the creator deletes it,
-  and can be viewed by anyone given the unique link.
-  If you wish to test out the application,
-  feel free to sign in as a guest and test out the features!
+    </div>
+
+    <div class="description">
+      Welcome to Bill Organizer!
+      This web application is a free service that
+      helps you split household bills with
+      your roommates based on time spent in residence.
+      Bill data will persist until the creator deletes it,
+      and can be viewed by anyone given the unique link.
+      If you wish to test out the application,
+      feel free to sign in as a guest and test out the features!
+    </div>
 </div>

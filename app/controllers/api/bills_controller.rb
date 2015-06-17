@@ -55,6 +55,16 @@ module Api
       render :show
     end
 
+    def mail_to_people
+      @bill = Bill.find(params[:bill_id])
+      mailer = RoommateMailer
+      @bill.roommates.each do |roommate|
+        amount = @bill.owed_amount(roommate)
+        mailer.invoice( roommate, @bill, amount, current_user).deliver_now
+      end
+      render json: {}
+    end
+
     private
     def bill_params
       params.require(:bill).permit(:title, :bill_type, :amount, :from_date, :end_date)

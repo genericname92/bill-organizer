@@ -4,7 +4,7 @@ BillOrganizer.Views.MailPreview = Backbone.View.extend({
   events: {
     'click .close': 'remove',
     'click .m-backdrop': 'remove',
-    "click sendMail": "submit"
+    "click .sendMail": "submit"
   },
 
   render: function(){
@@ -15,6 +15,14 @@ BillOrganizer.Views.MailPreview = Backbone.View.extend({
 
   submit: function(event){
     event.preventDefault();
+    $.ajax({
+      method: "POST",
+      url: "api/bills/"+this.model.id+"/mail_to_people",
+      dataType: 'json',
+      success: function(){
+        this.remove();
+      }.bind(this)
+    });
   }
 
 });

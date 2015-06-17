@@ -15,6 +15,7 @@
 #
 
 class Bill < ActiveRecord::Base
+  include Calculatable
   validates :title, :bill_type, :owner_id, :amount, :from_date, :end_date, presence: true
   validate :date_durations
   has_many :roommates, dependent: :destroy
