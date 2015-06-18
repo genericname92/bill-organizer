@@ -1,3 +1,8 @@
+User.all.destroy_all
+Bill.all.destroy_all
+Roommate.all.destroy_all
+Follow.all.destroy_all
+
 guest_user = User.create!(email: "guest", password: "password")
 User.create!(email: "billClinton@example.com", password: "password")
 User.create!(email: "billCosby@example.com", password: "password")

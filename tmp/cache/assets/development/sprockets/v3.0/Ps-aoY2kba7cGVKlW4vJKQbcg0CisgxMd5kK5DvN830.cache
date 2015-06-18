@@ -1,0 +1,1 @@
+I" function(obj){var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.push('<div class="made">\n<h1> My bills </h1>\n<ul class="billList"></ul>\n\n</div>\n<div class="tagged">\n<h1> Tagged Bills</h1>\n<ul class="taggedBills"</ul>\n\n</div>\n');}return __p.join('');}:ET
