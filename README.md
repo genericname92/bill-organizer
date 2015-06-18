@@ -2,22 +2,21 @@
 
 [Heroku link][heroku]
 
-[heroku]: TODO
+[heroku]: https://bill-organizer.herokuapp.com
 
 ## Minimum Viable Product
 Bill organizer is a Rails and Backbone web application built for the simple purpose of aiding and organizing household bills amongst roommates.
 
 <!-- This is a Markdown checklist. Use it to keep track of your progress! -->
 
-- [ ] Create accounts
-- [ ] Create sessions (log in)
-- [ ] Create bills
-- [ ] Calculate bills in differing currencies & bill types    (electricity, water, etc)
-- [ ] Add bills to user profiles
-- [ ] Email invoices to both users and nonusers
-- [ ] View and Search bills owned by current user
-- [ ] Link bills through unique identifier that anyone can view
-- [ ] Mark bills as paid
+- [ x] Create accounts
+- [ x] Create sessions (log in)
+- [ x] Create bills
+- [ x] Add bills to user profiles
+- [ x] Email invoices to both users and nonusers
+- [ x] View and Search bills owned by current user
+- [ x] Link bills through unique identifier that anyone can view
+- [x ] Mark bills as paid
 
 ## Design Docs
 * [View Wireframes][views]
