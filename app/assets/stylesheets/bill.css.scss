@@ -93,3 +93,21 @@ svg {
 .billItem:hover {
   background-color: pink;
 }
+
+.taggedBills {
+  height: 800px;
+  overflow: scroll;
+  padding: 0;
+  margin: 0;
+}
+
+.billList {
+  height: 800px;
+  overflow: scroll;
+  padding: 0;
+  margin: 0;
+}
+
+.billInfo {
+  padding-bottom: 10px;
+}

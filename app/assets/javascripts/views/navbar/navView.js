@@ -3,7 +3,7 @@ BillOrganizer.Views.NavView = Backbone.CompositeView.extend({
   initialize: function(options){
     this.router = options.router;
     this.followBills = new BillOrganizer.Collections.Bills();
-    this.followBills.fetch({data: {unseenTaggedBills: true} });
+    this.followBills.fetch({ data: {unseenTaggedBills: true } });
     this.listenTo(this.followBills, "sync remove", this.render);
     this.listenTo(this.followBills, 'add', this.addBill);
 
