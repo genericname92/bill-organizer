@@ -8,13 +8,14 @@
       title="Edit this bill!">
     </button>
     <button
-      class="deleteBill btn btn-danger pull-left btn-group btn-group-sm glyphicon glyphicon-remove-sign"
+      class="deleteBill close"
       type=button
-      title="Delete this bill!">
+      title="Delete this bill!">&times
     </button>
   <% } %>
 <div class="billDetails">
   <table class="table table-hover">
+  <table class="table table-striped table-bordered">
     <tr>
       <th>Type:</th>
       <td><%= bill.escape("bill_type") %> </td>
@@ -46,12 +47,11 @@
 </div>
 <div class="roommateShowContainer group">
 <% if (window.CURRENT_USER_ID === parseInt(bill.escape("owner_id"))){ %>
-  <label> Add new person
+
     <button
-      class="glyphicon glyphicon-plus roommateNew"
-      title="Add a new roommate!">
+      class="btn btn-info glyphicon glyphicon-plus roommateNew"
+      title="Add a new roommate!">Add new person
     </button>
-  </label>
 <% } %>
   <div class="roommateContainer group"></div>
 </div>

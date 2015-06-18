@@ -15,12 +15,12 @@
     <div class="type_buttons">
       <div>Select from some common types or just type in your own</div><br>
       <div>
-        <button type="button" class="Electricity" value="Electricity">Electricity</button>
-        <button type="button" class="Water" value="Water">Water</button>
-        <button type="button" class="Gas" value="Gas">Gas</button>
-        <button type="button" class="Internet" value="Internet">Internet</button>
-        <button type="button" class="Utilities" value="Utilities">Utilities</button>
-        <button type="button" class="Rent" value="Rent">Rent</button>
+        <button type="button" class="Electricity btn btn-primary" value="Electricity">Electricity</button>
+        <button type="button" class="Water btn btn-primary" value="Water">Water</button>
+        <button type="button" class="Gas btn btn-primary" value="Gas">Gas</button>
+        <button type="button" class="Internet btn btn-primary" value="Internet">Internet</button>
+        <button type="button" class="Utilities btn btn-primary" value="Utilities">Utilities</button>
+        <button type="button" class="Rent btn btn-primary" value="Rent">Rent</button>
       </div><br>
     </div>
     <div class="form-group">
@@ -44,7 +44,9 @@
         >
       </label>
     </div>
+    <div class="period">
     This bill is for the period
+    </div>
     <div class="form-group">
       <label> From:
         <input
@@ -67,7 +69,7 @@
     </div>
     <div class="form-group">
       <input
-        class="btn btn-default"
+        class="btn btn-success"
         type="submit"
         value="<%=formType%> a bill!"
       >

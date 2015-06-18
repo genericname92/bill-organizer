@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   resources :users
   resource :session
   namespace :api, defaults: {format: :json} do
-    get 'bills/unseen_tagged_bills'
     resources :bills, except: [:new, :edit] do
       post 'mail_to_people'
     end

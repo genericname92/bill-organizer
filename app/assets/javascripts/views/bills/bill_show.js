@@ -85,7 +85,7 @@ BillOrganizer.Views.BillShow = Backbone.CompositeView.extend({
     var modal = new BillOrganizer.Views.MailPreview({
       model: this.model
     });
-    $('body').prepend(modal.render().$el);    
+    $('body').prepend(modal.render().$el);
   }
 
 });

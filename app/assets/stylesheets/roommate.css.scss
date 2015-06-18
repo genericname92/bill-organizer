@@ -1,27 +1,51 @@
+
 .roommateContainer {
+  font-family:arial,sans-serif;
+  font-size:100%;
+  margin:3em;
+//  background-image: url(http://2.bp.blogspot.com/-27YrInP8zxg/UC1Y_Ih2JvI/AAAAAAAAASs/ixJBEtbjWhM/s1600/Cork-Board.gif);
+  color:#fff;
+  width: 220%;
+  position: relative;
+  left: -300px;
   label {
     float: left;
     margin-top: 10px;
     position: relative;
-  }
 
-  .editRoommate {
-    margin-top: 10px;
-    position: relative;
   }
-  
 }
 
+.roommateNew {
+  position: relative;
+  right: 20%;
+  top: 25px;
+}
 .roommateAttrs {
-  float: right;
   li {
     list-style: none;
   }
 }
 
 .SingleRoommate {
-  margin-bottom: 5px;
+  font-size: 16px;
+  margin-left: 20px;
+  margin-bottom: 20px;
   border: 1px solid black;
+  text-decoration:none;
+  position: relative;
+   color:#000;
+   background:#ffc;
+   display:block;
+   height:15em;
+   width:15em;
+   padding:1em;
+   float: left;
+   -moz-box-shadow:5px 5px 7px rgba(33,33,33,1);
+/* Safari+Chrome */
+-webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+/* Opera */
+box-shadow: 5px 5px 7px rgba(33,33,33,.7);
 }
 
 .paidRoommate{
@@ -39,10 +63,6 @@
   float: right;
 }
 
-.modal-backdrop {
-  background-color: #ccc;
-  opacity: 0.5;
-}
 
 .roommateForm {
   position: absolute;

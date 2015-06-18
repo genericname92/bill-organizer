@@ -1,46 +1,32 @@
 .billShowTitle {
-  font-size: 36px;
+  font-size: 40px;
   font-weight: 300;
 }
 
 .billShowContainer {
-  margin-left: 15px;
+  font-size: 18px;
+  border: 1px solid black;
+  margin: 15px;
+  padding-left: 15px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  padding-right: 3px;
   button {
     margin: 20px 10px 0 10px;
   }
   width: 50%;
   float: left;
   text-align: left;
+    .table {
+      background-color: aquamarine;
+    }
 
-  table {
-    width: 100%;
-    font-size: 24px;
-    border: 1px solid black;
-    border-radius: 4px;
-    tbody {
-      tr {
-        border: 1px solid black;
-        th {
-          border-right: 1px solid black;
-        }
-        td {
-          padding-left: 30px;
-        }
-      }
-      tr:nth-child(2n){
-        background-color: lavenderblush;
-      }
-
+    .close {
+      position: relative;
+      top: -27px;
     }
   }
-}
 
-
-.billDetails {
-  width: 100%;
-  clear: both;
-  display: block;
-}
 .deleteBill {
   padding-left: 5px;
   padding-right: 5px;
@@ -68,4 +54,42 @@
   padding: 0 auto;
   padding-left: 5px;
   font-size: 12px;
+}
+
+.made {
+  float: left;
+}
+
+.tagged {
+  float: right;
+}
+
+svg {
+  position: absolute;
+  bottom: 10px;
+}
+#check {
+  fill: none;
+  stroke: green;
+  stroke-width: 20;
+  stroke-dasharray: 180;
+  stroke-dashoffset: 180;
+  animation: draw 2s 1 ease;
+  animation-fill-mode: forwards;
+}
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+.billItem {
+  margin-bottom: 5px;
+  padding: 5px;
+  a {
+  color: teal;
+  text-decoration: none;
+  }
+}
+.billItem:hover {
+  background-color: pink;
 }

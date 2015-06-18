@@ -37,17 +37,19 @@ module Api
 
     def index
       if params[:taggedBills]
-        @bills = current_user.tagged_bills
+        @bills = current_user.tagged_bills.reject { |bill| bill.owner_id == current_user.id }
+        render json: @bills
+      elsif params[:unseenTaggedBills]
+        tag_bills = current_user.tagged_bills.includes(:follows).where("viewed=false")
+        @bills = tag_bills.reject { |bill| bill.owner_id == current_user.id }
+        notifications = current_user.taggings.where("viewed=false")
+        user_bill_ids = current_user.bills.map { |bill| bill.id }
+        @notifications = notifications.reject {|notification| user_bill_ids.include?(notification.bill_id) }
+        render :notifications
       else
         @bills = current_user.bills
+        render json: @bills
       end
-      render json: @bills
-    end
-
-    def unseen_tagged_bills
-      @bills = current_user.tagged_bills.includes(:follows).where("viewed=false")
-      @notifications = current_user.taggings.where("viewed=false")
-      render :notifications
     end
 
     def show
