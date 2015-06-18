@@ -32,8 +32,17 @@ BILL_TYPES = ["Gas", "Electricity", "Water", "Internet", "Utilities", "Rent"]
       # 1 start after end before
       #also add guest as a roommate on some amount of the bills
       tracked_person = user_list.sample
-      ele.roommates.create!(email: tracked_person.email, from_date: ele.from_date, end_date: ele.end_date)
-      Follow.create!(bill_id: ele.id, user_id: tracked_person.id)
+      ele.roommates.create!(
+        email: tracked_person.email,
+        from_date: ele.from_date,
+        end_date: ele.end_date,
+        paid: true
+      )
+      if rand() > 0.5 && num > 5
+        Follow.create!(bill_id: ele.id, user_id: tracked_person.id)
+      else
+        Follow.create!(bill_id: ele.id, user_id: tracked_person.id, viewed: true)
+      end
       roommate_list = []
 
       roommate = random_users.sample
@@ -45,7 +54,11 @@ BILL_TYPES = ["Gas", "Electricity", "Water", "Internet", "Utilities", "Rent"]
         from_date: ele.from_date,
         end_date: ele.end_date - (rand() *28).days
       )
-      Follow.create!(bill_id: ele.id, user_id: roommate.id)
+      if rand() > 0.5 && num > 5
+        Follow.create!(bill_id: ele.id, user_id: roommate.id)
+      else
+        Follow.create!(bill_id: ele.id, user_id: roommate.id, viewed: true)
+      end
 
       roommate = random_users.sample
 
@@ -58,7 +71,11 @@ BILL_TYPES = ["Gas", "Electricity", "Water", "Internet", "Utilities", "Rent"]
         from_date: ele.from_date + (rand() * 28).days,
         end_date: ele.end_date
       )
-      Follow.create!(bill_id: ele.id, user_id: roommate.id)
+      if rand() > 0.5 && num > 5
+        Follow.create!(bill_id: ele.id, user_id: roommate.id)
+      else
+        Follow.create!(bill_id: ele.id, user_id: roommate.id, viewed: true)
+      end
 
       start_date = ele.from_date + (rand() * 28).days
       roommate = random_users.sample
@@ -69,16 +86,24 @@ BILL_TYPES = ["Gas", "Electricity", "Water", "Internet", "Utilities", "Rent"]
       ele.roommates.create!(
         email: roommate.email,
         from_date: start_date,
-        end_date: start_date + 5.days
+        end_date: start_date + 5.days,
+        paid: true
       )
-      Follow.create!(bill_id: ele.id, user_id: roommate.id)
+      if rand() > 0.5 && num > 5
+        Follow.create!(bill_id: ele.id, user_id: roommate.id)
+      else
+        Follow.create!(bill_id: ele.id, user_id: roommate.id, viewed: true)
+      end
 
       if tracked_person != guest_user && rand() > 0.3
         ele.roommates.create!(
           email: guest_user.email, from_date: ele.from_date, end_date: ele.end_date
         )
-        Follow.create!(bill_id: ele.id, user_id: guest_user.id)
-
+        if rand() > 0.5 && num > 5
+          Follow.create!(bill_id: ele.id, user_id: guest_user.id)
+        else
+          Follow.create!(bill_id: ele.id, user_id: guest_user.id, viewed: true)
+        end
       end
 
 

@@ -32,7 +32,7 @@ BillOrganizer.Calculator = function(bill){
   this.owedAmount = function(roommate){
     var days = this.relevantDays(roommate);
     var totalDays = this.totalDays();
-    var amount = parseInt(this.bill.escape("amount"));
+    var amount = parseFloat(this.bill.escape("amount"));
     return (amount * (days / totalDays)).toFixed(2);
   };
 };
