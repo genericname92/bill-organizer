@@ -16,8 +16,8 @@ BillOrganizer.Views.BillItem = Backbone.View.extend({
     var monthNames = ["January", "February", "March", "April", "May", "June",
     "July", "August", "September", "October", "November", "December"
     ];
-    return monthNames[parseInt(date.getMonth())] +
-      " " + date.getDate() + ", " + date.getFullYear();
+    return monthNames[parseInt(date.getUTCMonth())] +
+      " " + date.getUTCDate() + ", " + date.getUTCFullYear();
 
   },
 

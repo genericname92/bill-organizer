@@ -14,6 +14,7 @@ gem 'bootstrap-sass'
 gem 'backbone-on-rails'
 gem 'jquery-ui-rails'
 gem 'figaro'
+gem 'forgery'
 
  gem 'bcrypt', '~> 3.1.7'
 group :development, :test do

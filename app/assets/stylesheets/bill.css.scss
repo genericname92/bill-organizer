@@ -82,3 +82,14 @@ svg {
     stroke-dashoffset: 0;
   }
 }
+.billItem {
+  margin-bottom: 5px;
+  padding: 5px;
+  a {
+  color: teal;
+  text-decoration: none;
+  }
+}
+.billItem:hover {
+  background-color: pink;
+}

@@ -37,7 +37,7 @@ module Api
 
     def index
       if params[:taggedBills]
-        @bills = current_user.tagged_bills
+        @bills = current_user.tagged_bills.reject { |bill| bill.owner_id == current_user.id }
         render json: @bills
       elsif params[:unseenTaggedBills]
         @bills = current_user.tagged_bills.includes(:follows).where("viewed=false")

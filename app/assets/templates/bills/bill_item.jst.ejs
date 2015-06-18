@@ -3,8 +3,10 @@
   class="deleteBill close" title="Delete this bill!">&times;
 </button>
 <% } %>
-<div class="billInfo">
-<a href="#bills/<%=bill.id%>"><%= bill.escape("title") %></a><br>
-<div class="date">From <%= from_date %> to <%= end_date %></div>
-<div class="date">Last Updated: <%= date %></div>
-</div>
+<a href="#bills/<%=bill.id%>">
+  <div class="billInfo">
+  <%= bill.escape("title") %><br>
+  <div class="date">From <%= from_date %> to <%= end_date %></div>
+  <div class="date">Last Updated: <%= date %></div>
+  </div>
+</a>

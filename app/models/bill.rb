@@ -30,6 +30,7 @@ class Bill < ActiveRecord::Base
   after_initialize :ensure_show_string
 
   def date_durations
+    return if from_date == nil || end_date == nil
     if from_date - end_date > 0
       errors.add(:duration, "End date cannot be before Start Date")
     end
