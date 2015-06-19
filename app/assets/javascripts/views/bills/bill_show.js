@@ -21,6 +21,16 @@ BillOrganizer.Views.BillShow = Backbone.CompositeView.extend({
   removeRoommate: function(roommate){
     this.removeModelSubview(".roommateContainer", roommate);
   },
+  addComment: function(comment){
+    var view = new BillOrganizer.Views.CommentItem({
+      model: comment,
+    });
+    this.addSubview('.commentContainer', view);
+  },
+
+  removeComment: function(comment){
+    this.removeModelSubview(".commentContainer", comment);
+  },
 
   addRoommateForm: function(){
     var roommate = new BillOrganizer.Models.Roommate({bill: this.model});
@@ -47,6 +57,7 @@ BillOrganizer.Views.BillShow = Backbone.CompositeView.extend({
     var content = this.template({bill: this.model, date: date});
     this.$el.html(content);
     this.attachSubviews();
+    debugger;
     return this;
   },
 

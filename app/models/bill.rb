@@ -23,7 +23,7 @@ class Bill < ActiveRecord::Base
   has_many :tagged_users, through: :follows, source: :user
   belongs_to(
     :owner,
-    class_name: "user",
+    class_name: "User",
     primary_key: "id",
     foreign_key: "owner_id",
   )
