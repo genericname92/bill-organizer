@@ -21,6 +21,7 @@ class Bill < ActiveRecord::Base
   has_many :roommates, dependent: :destroy
   has_many :follows
   has_many :tagged_users, through: :follows, source: :user
+  has_many :comments, dependent: :destroy
   belongs_to(
     :owner,
     class_name: "User",

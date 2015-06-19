@@ -1,14 +1,18 @@
 .m-content {
+  border: 3px solid gainsboro;
   z-index: 101;
-  background-color: white;
+  background-color: ghostwhite;
   border-radius: 3px;
   padding: 20px;
   height: 400px;
   width: 564px;
   position: fixed;
-  /* margin: 0 auto; */
   margin-top: 66px;
   left: 25%;
+  form {
+    left: 30%;
+    position: relative;
+  }
 }
 .m-backdrop {
   position: absolute;

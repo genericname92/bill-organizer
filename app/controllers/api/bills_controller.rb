@@ -54,6 +54,7 @@ module Api
 
     def show
       @bill = Bill.find(params[:id])
+      @comments = @bill.comments.includes(:user)
       render :show
     end
 

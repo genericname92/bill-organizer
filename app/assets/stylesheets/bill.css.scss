@@ -2,20 +2,25 @@
   font-size: 40px;
   font-weight: 300;
 }
+.showContainer {
+  width: 40%;
+  float: left;
+}
 
 .billShowContainer {
-  font-size: 18px;
-  border: 1px solid black;
+  width: 100%;
   margin: 15px;
   padding-left: 15px;
   padding-bottom: 15px;
   padding-top: 15px;
   padding-right: 3px;
+  font-size: 18px;
+  border: 1px solid black;
+
   button {
     margin: 20px 10px 0 10px;
   }
-  width: 40%;
-  float: left;
+
   text-align: left;
     .table {
       background-color: aquamarine;
@@ -120,4 +125,20 @@ svg {
   top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.close {
+  padding: 2px;
+}
+
+.billForm {
+  top: 10px;
+  position: relative;
+  font-size: 16px;
+  .errors {
+    position: relative;
+    float: right;
+    right: 10%;
+    font-size: 18px;
+  }
 }

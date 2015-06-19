@@ -9,5 +9,6 @@ Rails.application.routes.draw do
     end
     resources :roommates, only: [:create, :update, :destroy]
     resources :follows, only: [:update, :destroy, :show]
+    resources :comments, only: [:create, :destroy]
   end
 end

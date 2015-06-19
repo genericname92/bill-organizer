@@ -1,51 +1,67 @@
-<div class="billShowContainer group">
+<div class="showContainer">
+  <div class="billShowContainer group">
 
-  <div class="billShowTitle pull-left"><%= bill.escape("title") %></div>
+    <div class="billShowTitle pull-left"><%= bill.escape("title") %></div>
+    <% if (window.CURRENT_USER_ID === parseInt(bill.escape("owner_id"))){ %>
+      <button
+        class="editBill pull-left btn-group btn-group-sm glyphicon glyphicon-pencil"
+        type=button
+        title="Edit this bill!">
+      </button>
+      <button
+        class="deleteBill close"
+        type=button
+        title="Delete this bill!">&times
+      </button>
+    <% } %>
+  <div class="billDetails">
+    <table class="table table-hover">
+    <table class="table table-striped table-bordered">
+      <tr>
+        <th>Type:</th>
+        <td><%= bill.escape("bill_type") %> </td>
+      </tr>
+      <tr>
+        <th>Amount:</th>
+        <td><%= bill.escape("amount") %> </td>
+      </tr>
+      <tr>
+        <th>From:</th>
+        <td><%= bill.escape("from_date") %> </td>
+      </tr>
+      <tr>
+        <th>To:</th>
+        <td><%= bill.escape("end_date") %></td>
+      <tr>
+        <th>Updated at:</th>
+        <td><%= date %> </td>
+      </tr>
+    </table>
+  </div>
   <% if (window.CURRENT_USER_ID === parseInt(bill.escape("owner_id"))){ %>
-    <button
-      class="editBill pull-left btn-group btn-group-sm glyphicon glyphicon-pencil"
-      type=button
-      title="Edit this bill!">
-    </button>
-    <button
-      class="deleteBill close"
-      type=button
-      title="Delete this bill!">&times
-    </button>
+    <label> See Mail Previews!
+      <button
+        type="button"
+        title="View Email Preview!"
+        class="invoice glyphicon glyphicon-envelope" >
+      </button>
+    </label>
   <% } %>
-<div class="billDetails">
-  <table class="table table-hover">
-  <table class="table table-striped table-bordered">
-    <tr>
-      <th>Type:</th>
-      <td><%= bill.escape("bill_type") %> </td>
-    </tr>
-    <tr>
-      <th>Amount:</th>
-      <td><%= bill.escape("amount") %> </td>
-    </tr>
-    <tr>
-      <th>From:</th>
-      <td><%= bill.escape("from_date") %> </td>
-    </tr>
-    <tr>
-      <th>To:</th>
-      <td><%= bill.escape("end_date") %></td>
-    <tr>
-      <th>Updated at:</th>
-      <td><%= date %> </td>
-    </tr>
-  </table>
-</div>
-<% if (window.CURRENT_USER_ID === parseInt(bill.escape("owner_id"))){ %>
-  <label> See Mail Previews!
-    <button
-      type="button"
-      title="View Email Preview!"
-      class="invoice glyphicon glyphicon-envelope" >
-    </button>
-  </label>
-<% } %>
+
+  </div>
+  <div class="commentContainer group">
+  <% if (validUser) {%>
+    <ul class="errors"></ul>
+    <form class="newComment">
+      <textarea name="body" placeholder="Add a comment"></textarea>
+      <input type="submit" class="newCommentButton btn btn-info glyphicon glyphicon-plus"
+        title="Add a comment!" value="Post!">
+      </input>
+    </form>
+  <% } %>
+  <br>
+    <div class="comments"></div>
+  </div>
 </div>
 <div class="roommateShowContainer group">
 <% if (window.CURRENT_USER_ID === parseInt(bill.escape("owner_id"))){ %>
