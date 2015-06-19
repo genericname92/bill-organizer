@@ -1,4 +1,5 @@
 .signOutButton {
+  left: 10%;
   background: none;
   border: none;
   font: inherit;
@@ -11,7 +12,24 @@
   padding-left: 20px;
 }
 
+.userInfo:hover {
+  background-color: skyblue;
+}
+
 .tag_notifications {
   display: block;
   height: 100%;
+}
+
+.userInfo {
+  background-color: ivory;
+  li{
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.logo {
+  padding: 0;
+  margin: 0;
 }

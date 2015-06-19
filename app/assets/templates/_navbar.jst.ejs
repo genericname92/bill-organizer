@@ -8,7 +8,12 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Bill Organizer</a>
+      <a
+        class="navbar-brand logo"
+        href="#">
+      <img src="http://res.cloudinary.com/bill-organizer/image/upload/c_scale,w_106/v1434658372/Bill_Organizer-logo_itg7mx.png">
+      </img>
+      </a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -47,10 +52,7 @@
             <%= window.CURRENT_USER_EMAIL %>
             <span class="caret"></span>
           </a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Edit Profile</a></li>
-            <li class="divider"></li>
+          <ul class="userInfo dropdown-menu" role="menu">
             <li>
               <form action="/session" method="POST">
                 <input type="hidden" name="authenticity_token" value="<%= $('meta[name="csrf-token"]').attr('content')%>">
