@@ -95,14 +95,16 @@ svg {
 }
 
 .taggedBills {
-  height: 800px;
+  height: auto;
+  max-height: 600px;
   overflow: scroll;
   padding: 0;
   margin: 0;
 }
 
 .billList {
-  height: 800px;
+  height: auto;
+  max-height: 600px;
   overflow: scroll;
   padding: 0;
   margin: 0;
@@ -110,4 +112,11 @@ svg {
 
 .billInfo {
   padding-bottom: 10px;
+}
+
+
+.amazingSearchBar{
+  position: absolute;
+  top: 30%;
+  left: 40%;
 }

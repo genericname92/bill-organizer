@@ -10,8 +10,7 @@ BillOrganizer.Routers.Router = Backbone.Router.extend({
     this._currentView = view;
     this.$rootEl.html(view.render().$el);
   },
-
-  routes: {
+    routes: {
     "": "index",
     "bills": "index",
     "bills/new": "new",
@@ -19,9 +18,11 @@ BillOrganizer.Routers.Router = Backbone.Router.extend({
     "bills/:id/edit": "edit"
   },
 
+
   index: function() {
-    this.collection.sort();
-    var view = new BillOrganizer.Views.BillsIndex({collection: this.collection, taggedBills: this.taggedBills});
+    view = new BillOrganizer.Views.Dashboard({ collection: this.collection,
+      taggedBills: this.taggedBills
+    });
     this._swapView(view);
   },
 
@@ -51,4 +52,7 @@ BillOrganizer.Routers.Router = Backbone.Router.extend({
     });
     this._swapView(view);
   },
+
+
+
 });

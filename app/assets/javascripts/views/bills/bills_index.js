@@ -42,5 +42,4 @@ BillOrganizer.Views.BillsIndex = Backbone.CompositeView.extend({
     this.attachSubviews();
     return this;
   },
-
 });
