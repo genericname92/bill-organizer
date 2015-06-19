@@ -1,6 +1,6 @@
 BillOrganizer.Views.CommentItem = Backbone.View.extend({
   template: JST["comments/item"],
-  classname: "commentItem group",
+  className: "commentItem group",
   initialize: function(options){
     this.bill = options.bill;
     this.listenTo(this.model, 'sync', this.render);
