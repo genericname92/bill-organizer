@@ -38,9 +38,16 @@ BillOrganizer.Routers.Router = Backbone.Router.extend({
 
   show: function(id) {
     var bill = new BillOrganizer.Models.Bill({id: id});
-    bill.fetch();
-    var view = new BillOrganizer.Views.BillShow({model: bill});
-    this._swapView(view);
+    bill.fetch({
+      success: function(){
+        var view = new BillOrganizer.Views.BillShow({model: bill});
+        this._swapView(view);
+      }.bind(this),
+      error: function(){
+        alert("Bill not found!");
+        Backbone.history.navigate("", {trigger: true});
+      }
+    });
   },
 
   edit: function(id) {

@@ -35,7 +35,7 @@ BillOrganizer.Views.Dashboard = Backbone.View.extend({
   },
 
   findBills: function(event){
-    var queryString = new RegExp(event.currentTarget.value);
+    var queryString = new RegExp(event.currentTarget.value, "i");
     var filteredCollection = new BillOrganizer.Collections.Bills();
     var filteredBills = this.collection.filter(function(bill){
       return bill.escape("title").match(queryString);
