@@ -2,6 +2,7 @@ User.all.destroy_all
 Bill.all.destroy_all
 Roommate.all.destroy_all
 Follow.all.destroy_all
+Comment.all.destroy_all
 
 guest_user = User.create!(email: "guest", password: "password")
 a = User.create!(email: "billClinton@example.com", password: "password")
@@ -105,6 +106,18 @@ BILL_TYPES = ["Gas", "Electricity", "Water", "Internet", "Utilities", "Rent"]
           Follow.create!(bill_id: ele.id, user_id: guest_user.id, viewed: true)
         end
       end
+
+      Comment.create!(
+        bill_id: ele.id,
+        owner_id: tracked_person.id,
+        body: "One day #{roommate_list.sample.email} will learn to waste less #{ele.bill_type}"
+      )
+
+      Comment.create!(
+        bill_id: ele.id,
+        owner_id: roommate_list.sample.id,
+        body: "One day we will spot a pink flying unicorn"
+      )
 
 
     end

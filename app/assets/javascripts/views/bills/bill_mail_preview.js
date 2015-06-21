@@ -20,9 +20,10 @@ BillOrganizer.Views.MailPreview = Backbone.View.extend({
       url: "api/bills/"+this.model.id+"/mail_to_people",
       dataType: 'json',
       success: function(){
-        this.remove();
+        alert("Mail sent!");
       }.bind(this)
     });
+    this.remove();
   }
 
 });

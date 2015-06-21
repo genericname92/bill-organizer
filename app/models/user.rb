@@ -36,6 +36,8 @@ class User < ActiveRecord::Base
 
   )
 
+  has_many :comments
+
   attr_reader :password
   after_initialize :ensure_session_token
 
