@@ -4,6 +4,11 @@
 
 [heroku]: https://bill-organizer.herokuapp.com
 
+##Notable Features
+- Notifications system that will flag users that are tagged in any bill another user creates
+- Mailer using Sendgrid that will email invoices to each roommate of a tagged bill
+- Dynamic Filter that allows users to filter by bill title
+- Calculations updated dynamically whenever any information about the bill or any of the people tagged within the bill change
 ## Minimum Viable Product
 Bill organizer is a Rails and Backbone web application built for the simple purpose of aiding and organizing household bills amongst roommates.
 
@@ -18,12 +23,6 @@ Bill organizer is a Rails and Backbone web application built for the simple purp
 - [ x] Link bills through unique identifier that anyone can view
 - [x ] Mark bills as paid
 
-## Design Docs
-* [View Wireframes][views]
-* [DB schema][schema]
-
-[views]: ./docs/views.md
-[schema]: ./docs/schema.md
 
 ## Implementation Timeline
 
@@ -63,9 +62,3 @@ Backbone side, there will be a search bar where users can type in the unique ide
 ### Bonus Features (TBD)
 - [ ] Integrate Venmo or other person-to-person payment option
 - [ ] User stats on bill history
-
-[phase-one]: ./docs/phases/phase1.md
-[phase-two]: ./docs/phases/phase2.md
-[phase-three]: ./docs/phases/phase3.md
-[phase-four]: ./docs/phases/phase4.md
-[phase-five]: ./docs/phases/phase5.md
