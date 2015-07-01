@@ -5,7 +5,9 @@ class RoommateMailer < ActionMailer::Base
     @bill = bill
     @user = current_user
     @amount = amount
-    mail to: roommate.email,
-      subject: (current_user.email + " has sent you an invoice!")
+    if (@amount > 0)
+      mail to: roommate.email,
+        subject: (current_user.email + " has sent you an invoice!")
+    end
   end
 end

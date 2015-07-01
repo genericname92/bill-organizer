@@ -8,7 +8,7 @@ module Calculatable
   def total_relevant_days
     total_days = 0
     self.roommates.each do |roommate|
-      total_days += relevant_days(roommate)
+      total_days += relevant_days(roommate) if relevant_days(roommate) > 0
     end
     total_days
   end
@@ -19,13 +19,13 @@ module Calculatable
     else
       relevantStartDate = self.from_date
     end
-
+    return 0 if relevantStartDate > self.end_date
     if roommate.end_date > self.end_date
       relevantEndDate = self.end_date
     else
       relevantEndDate = roommate.end_date
     end
-
+    return 0 if relevantEndDate < self.from_date
     relevantEndDate - relevantStartDate
   end
 

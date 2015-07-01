@@ -12,10 +12,16 @@ BillOrganizer.Calculator = function(bill){
     } else {
       relevantStartDate = billStartDate;
     }
+    if (relevantStartDate.getTime() > billEndDate.getTime()){
+      return 0;
+    }
     if (roommateEndDate.getTime() > billEndDate.getTime()){
       relevantEndDate = billEndDate;
     } else {
       relevantEndDate = roommateEndDate;
+    }
+    if (relevantEndDate.getTime() < billStartDate.getTime()){
+      return 0;
     }
     var days = (relevantEndDate - relevantStartDate) / (1000*24*60*60);
     return days;

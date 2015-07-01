@@ -25,7 +25,8 @@
           class="form-control"
           type="date"
           name="from_date"
-          value="<%=roommate.escape("from_date")%>"
+          value="<%=roommate.escape("from_date") || roommate.bill.escape("from_date")%>"
+          min="<%=roommate.bill.escape("end_date")%>"
           >
         </label>
       </div>
@@ -35,7 +36,8 @@
             class="form-control"
             type="date"
             name="end_date"
-            value="<%=roommate.escape("end_date")%>"
+            value="<%=roommate.escape("end_date") || roommate.bill.escape("end_date")%>"
+            max = "<%=roommate.bill.escape("end_date")%>"
           >
         </label>
       </div>
