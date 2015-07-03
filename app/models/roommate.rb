@@ -15,7 +15,7 @@
 class Roommate < ActiveRecord::Base
   belongs_to :bill
   validates :email, :from_date, :end_date, presence: true
-  validates :email, uniqueness: true
+  validates :email, uniqueness: { scope: :bill_id }
   validate :date_durations
   def date_durations
     return if from_date.nil? || end_date.nil?
