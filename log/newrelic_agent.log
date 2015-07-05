@@ -388,3 +388,68 @@
 [07/03/15 14:50:27 -0700 simon-VirtualBox (5522)] INFO : Doing deferred dependency-detection before Rack startup
 [07/03/15 14:50:36 -0700 simon-VirtualBox (5522)] ERROR : Invalid license key, please contact support@newrelic.com
 [07/03/15 14:50:36 -0700 simon-VirtualBox (5522)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[07/03/15 15:20:06 -0700 simon-VirtualBox (5522)] INFO : Starting Agent shutdown
+[07/03/15 17:01:51 -0700 simon-VirtualBox (5278)] INFO : Starting the New Relic agent in "development" environment.
+[07/03/15 17:01:51 -0700 simon-VirtualBox (5278)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[07/03/15 17:01:51 -0700 simon-VirtualBox (5278)] WARN : No configuration file found. Working directory = /home/simon/Desktop/bill-organizer
+[07/03/15 17:01:51 -0700 simon-VirtualBox (5278)] WARN : Looked in these locations (based on defaults): /home/simon/Desktop/bill-organizer/config/newrelic.yml, /home/simon/Desktop/bill-organizer/newrelic.yml, /home/simon/Desktop/bill-organizer/config/newrelic.yml, /home/simon/Desktop/bill-organizer/newrelic.yml, /home/simon/.newrelic/newrelic.yml, /home/simon/newrelic.yml
+[07/03/15 17:01:51 -0700 simon-VirtualBox (5278)] INFO : Environment: development
+[07/03/15 17:01:51 -0700 simon-VirtualBox (5278)] INFO : No known dispatcher detected.
+[07/03/15 17:01:51 -0700 simon-VirtualBox (5278)] INFO : Application: development
+[07/03/15 17:01:51 -0700 simon-VirtualBox (5278)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[07/03/15 17:01:51 -0700 simon-VirtualBox (5278)] INFO : Installing deferred Rack instrumentation
+[07/03/15 17:01:51 -0700 simon-VirtualBox (5278)] INFO : Installing Rack::Builder middleware instrumentation
+[07/03/15 17:01:51 -0700 simon-VirtualBox (5278)] INFO : Installing ActiveJob instrumentation
+[07/03/15 17:01:51 -0700 simon-VirtualBox (5278)] INFO : Installing Net instrumentation
+[07/03/15 17:01:51 -0700 simon-VirtualBox (5278)] INFO : Installing ActiveRecord 4 instrumentation
+[07/03/15 17:01:51 -0700 simon-VirtualBox (5278)] INFO : Installing Rails 3+ middleware instrumentation
+[07/03/15 17:01:51 -0700 simon-VirtualBox (5278)] INFO : Installing Rails 4 Error instrumentation
+[07/03/15 17:01:52 -0700 simon-VirtualBox (5278)] INFO : Installing Rails 4 view instrumentation
+[07/03/15 17:01:52 -0700 simon-VirtualBox (5278)] INFO : Installing Rails 4 Controller instrumentation
+[07/03/15 17:01:52 -0700 simon-VirtualBox (5278)] INFO : Finished instrumentation
+[07/03/15 17:01:52 -0700 simon-VirtualBox (5278)] INFO : Doing deferred dependency-detection before Rack startup
+[07/03/15 17:01:58 -0700 simon-VirtualBox (5278)] ERROR : Invalid license key, please contact support@newrelic.com
+[07/03/15 17:01:58 -0700 simon-VirtualBox (5278)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[07/03/15 17:46:30 -0700 simon-VirtualBox (5672)] INFO : Starting the New Relic agent in "development" environment.
+[07/03/15 17:46:30 -0700 simon-VirtualBox (5672)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[07/03/15 17:46:30 -0700 simon-VirtualBox (5672)] WARN : No configuration file found. Working directory = /home/simon/Desktop/bill-organizer
+[07/03/15 17:46:30 -0700 simon-VirtualBox (5672)] WARN : Looked in these locations (based on defaults): /home/simon/Desktop/bill-organizer/config/newrelic.yml, /home/simon/Desktop/bill-organizer/newrelic.yml, /home/simon/Desktop/bill-organizer/config/newrelic.yml, /home/simon/Desktop/bill-organizer/newrelic.yml, /home/simon/.newrelic/newrelic.yml, /home/simon/newrelic.yml
+[07/03/15 17:46:30 -0700 simon-VirtualBox (5672)] INFO : Environment: development
+[07/03/15 17:46:30 -0700 simon-VirtualBox (5672)] INFO : No known dispatcher detected.
+[07/03/15 17:46:30 -0700 simon-VirtualBox (5672)] INFO : Application: development
+[07/03/15 17:46:30 -0700 simon-VirtualBox (5672)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[07/03/15 17:46:30 -0700 simon-VirtualBox (5672)] INFO : Installing deferred Rack instrumentation
+[07/03/15 17:46:30 -0700 simon-VirtualBox (5672)] INFO : Installing Rack::Builder middleware instrumentation
+[07/03/15 17:46:30 -0700 simon-VirtualBox (5672)] INFO : Installing ActiveJob instrumentation
+[07/03/15 17:46:30 -0700 simon-VirtualBox (5672)] INFO : Installing Net instrumentation
+[07/03/15 17:46:30 -0700 simon-VirtualBox (5672)] INFO : Installing ActiveRecord 4 instrumentation
+[07/03/15 17:46:30 -0700 simon-VirtualBox (5672)] INFO : Installing Rails 3+ middleware instrumentation
+[07/03/15 17:46:30 -0700 simon-VirtualBox (5672)] INFO : Installing Rails 4 Error instrumentation
+[07/03/15 17:46:30 -0700 simon-VirtualBox (5672)] INFO : Installing Rails 4 view instrumentation
+[07/03/15 17:46:30 -0700 simon-VirtualBox (5672)] INFO : Installing Rails 4 Controller instrumentation
+[07/03/15 17:46:30 -0700 simon-VirtualBox (5672)] INFO : Finished instrumentation
+[07/03/15 17:46:30 -0700 simon-VirtualBox (5672)] INFO : Doing deferred dependency-detection before Rack startup
+[07/03/15 17:46:38 -0700 simon-VirtualBox (5672)] ERROR : Invalid license key, please contact support@newrelic.com
+[07/03/15 17:46:38 -0700 simon-VirtualBox (5672)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[07/04/15 16:10:48 -0700 simon-VirtualBox (7880)] INFO : Starting the New Relic agent in "development" environment.
+[07/04/15 16:10:48 -0700 simon-VirtualBox (7880)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[07/04/15 16:10:48 -0700 simon-VirtualBox (7880)] WARN : No configuration file found. Working directory = /home/simon/Desktop/bill-organizer
+[07/04/15 16:10:48 -0700 simon-VirtualBox (7880)] WARN : Looked in these locations (based on defaults): /home/simon/Desktop/bill-organizer/config/newrelic.yml, /home/simon/Desktop/bill-organizer/newrelic.yml, /home/simon/Desktop/bill-organizer/config/newrelic.yml, /home/simon/Desktop/bill-organizer/newrelic.yml, /home/simon/.newrelic/newrelic.yml, /home/simon/newrelic.yml
+[07/04/15 16:10:48 -0700 simon-VirtualBox (7880)] INFO : Environment: development
+[07/04/15 16:10:48 -0700 simon-VirtualBox (7880)] INFO : No known dispatcher detected.
+[07/04/15 16:10:48 -0700 simon-VirtualBox (7880)] INFO : Application: development
+[07/04/15 16:10:48 -0700 simon-VirtualBox (7880)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[07/04/15 16:10:48 -0700 simon-VirtualBox (7880)] INFO : Installing deferred Rack instrumentation
+[07/04/15 16:10:48 -0700 simon-VirtualBox (7880)] INFO : Installing Rack::Builder middleware instrumentation
+[07/04/15 16:10:48 -0700 simon-VirtualBox (7880)] INFO : Installing ActiveJob instrumentation
+[07/04/15 16:10:48 -0700 simon-VirtualBox (7880)] INFO : Installing Net instrumentation
+[07/04/15 16:10:48 -0700 simon-VirtualBox (7880)] INFO : Installing ActiveRecord 4 instrumentation
+[07/04/15 16:10:48 -0700 simon-VirtualBox (7880)] INFO : Installing Rails 3+ middleware instrumentation
+[07/04/15 16:10:48 -0700 simon-VirtualBox (7880)] INFO : Installing Rails 4 Error instrumentation
+[07/04/15 16:10:48 -0700 simon-VirtualBox (7880)] INFO : Installing Rails 4 view instrumentation
+[07/04/15 16:10:48 -0700 simon-VirtualBox (7880)] INFO : Installing Rails 4 Controller instrumentation
+[07/04/15 16:10:48 -0700 simon-VirtualBox (7880)] INFO : Finished instrumentation
+[07/04/15 16:10:49 -0700 simon-VirtualBox (7880)] INFO : Doing deferred dependency-detection before Rack startup
+[07/04/15 16:10:55 -0700 simon-VirtualBox (7880)] ERROR : Invalid license key, please contact support@newrelic.com
+[07/04/15 16:10:55 -0700 simon-VirtualBox (7880)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[07/04/15 19:33:20 -0700 simon-VirtualBox (7880)] INFO : Starting Agent shutdown

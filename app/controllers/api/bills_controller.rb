@@ -46,6 +46,9 @@ module Api
         user_bill_ids = current_user.bills.map { |bill| bill.id }
         @notifications = notifications.reject {|notification| user_bill_ids.include?(notification.bill_id) }
         render :notifications
+      elsif params[:searchString]
+        @bills = current_user.bills.where("title=#{params[:searchString]}")
+        render json: @bills
       else
         @bills = current_user.bills
         render json: @bills
