@@ -65,7 +65,7 @@ BillOrganizer.Views.RoommateItem = Backbone.View.extend({
     var confirmation = confirm("Are you sure you want to delete this person?");
     if (confirmation) {
       this.model.destroy();
-      this.remove();    
+      this.remove();
     }
   },
 });

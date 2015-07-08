@@ -1,5 +1,6 @@
 BillOrganizer.Views.Dashboard = Backbone.View.extend({
   template: JST["bills/dashboard"],
+  className: "group",
   initialize: function(options){
     this.taggedBills = options.taggedBills;
   },

@@ -30,6 +30,7 @@ BillOrganizer.Views.NavView = Backbone.CompositeView.extend({
   search: function(event){
     event.preventDefault();
     var form = $(event.currentTarget).serializeJSON();
+    $(event.currentTarget).find("input").val("");
     var searchString = form.searchString;
     var reg = /^\d+$/;
     if (searchString.match(reg)){

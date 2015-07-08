@@ -16,6 +16,21 @@
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
+
+body {
+
+  background: url(http://res.cloudinary.com/bill-organizer/image/upload/v1436245950/DeathtoStock_Medium9_oimsan.jpg) no-repeat center center fixed;
+
+ -webkit-background-size: 100% 100%;
+
+ -moz-background-size: 100% auto;
+
+ -ms-background-size: 100% auto;
+
+ -o-background-size: 100% auto;
+
+ background-size: 100% auto;
+}
 ul {
   list-style-type: none;
 }
@@ -31,16 +46,17 @@ li {
 
  .backdrop {
    width: 100%;
-   background-image: url(http://i.imgur.com/A2rqm.png);
-   position: fixed;
+   height: 100%;
    top: 0;
    bottom: 0;
    left: 0;
    right: 0;
-   overflow: scroll;
  }
 
 #main {
-  background-color: rgba(255, 255, 255, 0.8);
-  width: 1100px;
+  background-color: rgba(255, 255, 255, 1);
+  min-width: 1100px;
+  min-height: 600px;
+  position: relative;
+  bottom: 19px;
 }

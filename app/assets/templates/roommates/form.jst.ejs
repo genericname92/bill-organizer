@@ -1,5 +1,4 @@
 <div class="m-backdrop"></div>
-
 <div class="m-content">
 <button class="close">&times;</button>
   <div class="row">
@@ -25,8 +24,9 @@
           class="form-control"
           type="date"
           name="from_date"
-          value="<%=roommate.escape("from_date") || roommate.bill.escape("from_date")%>"
-          min="<%=roommate.bill.escape("end_date")%>"
+          value="<%=roommate.escape("from_date") || bill.escape("from_date")%>"
+          min="<%=bill.escape("from_date")%>"
+          max="<%=bill.escape("end_date")%>"
           >
         </label>
       </div>
@@ -36,8 +36,9 @@
             class="form-control"
             type="date"
             name="end_date"
-            value="<%=roommate.escape("end_date") || roommate.bill.escape("end_date")%>"
-            max = "<%=roommate.bill.escape("end_date")%>"
+            value="<%=roommate.escape("end_date") || bill.escape("end_date")%>"
+            min="<%=bill.escape("from_date")%>"
+            max = "<%=bill.escape("end_date")%>"
           >
         </label>
       </div>

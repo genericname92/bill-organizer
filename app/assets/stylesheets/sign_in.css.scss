@@ -1,23 +1,29 @@
+.left-sign-in {
+  float:left;
+  left: 6%;
+  top: 90px;
+  position: relative;
+}
+
+
 .sign_in {
   background-color: whitesmoke;
   margin: 5px auto;
   left: 25%;
-  top: 50px;
   border: 1px solid black;
   border-radius: 5px;
   position: relative;
   width: 300px;
-  float: left;
   padding: 10px;
   padding-left: 50px;
 }
 
 .description {
-  color: lightskyblue;
+  color: black;
   font-size: 18px;
   letter-spacing: 2px;
   position: relative;
-  left: 30%;
+  left: 25%;
   margin: 5px auto;
   top: 100px;
   float: left;
@@ -25,9 +31,6 @@
 }
 
 .main_title {
-  color: lightskyblue;
-  font-size: 52px;
-  font-weight: 500;
   position: relative;
   left: 30%;
   margin-bottom: 0;

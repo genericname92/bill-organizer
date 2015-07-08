@@ -1,5 +1,6 @@
 <div class="backdrop">
-    <div class="logo">
+  <div class="left-sign-in group">
+    <div class="logo group">
       <img class="main_title" src="http://res.cloudinary.com/bill-organizer/image/upload/v1434860201/Bill_Organizer-logo_qeau8i.png"></img>
   </div>
     <div class="sign_in">
@@ -16,7 +17,6 @@
       <input type="submit" value="Submit" class="btn btn-primary"><br>
     </form>
     <br>
-    <br>
     <form action="/session" method="post">
       <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
       <input name="user[email]" type="hidden" value="guest">
@@ -24,18 +24,15 @@
       <input type="submit" value="Sign In as Guest" class="btn btn-primary">
     </form>
     <br>
-    <br>
     No account? Sign up <a href="<%=new_user_url%>">here!</a>
 
     </div>
-
+  </div>
     <div class="description">
       Welcome to Bill Organizer!
       This web application is a free service that
       helps you split household bills with
-      your roommates based on time spent in residence.
-      Bill data will persist until the creator deletes it,
-      and can be viewed by anyone given the unique link.
+      people.
       If you wish to test out the application,
       feel free to sign in as a guest and test out the features!
     </div>

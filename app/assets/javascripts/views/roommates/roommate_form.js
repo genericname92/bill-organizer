@@ -12,7 +12,7 @@ BillOrganizer.Views.RoommatesNew = Backbone.View.extend({
   },
 
   render: function(){
-    var content = this.template({roommate: this.model, formType: this.formType});
+    var content = this.template({roommate: this.model, bill: this.model.collection.bill, formType: this.formType});
     this.$el.html(content);
     return this;
   },
