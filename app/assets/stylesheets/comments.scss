@@ -25,3 +25,21 @@
     left: 10%;
   }
 }
+
+.newComment {
+  width: 100%;
+  position: relative;
+  textarea {
+    width: 100%;
+    position: relative;
+  }
+}
+
+.comments {
+  width: 100%;
+  position: relative;
+  .commentItem {
+    width: 100%;
+    position: relative;
+  }
+}

@@ -1,38 +1,26 @@
-.left-sign-in {
-  float:left;
-  left: 6%;
-  top: 90px;
-  position: relative;
-}
-
-
 .sign_in {
   background-color: whitesmoke;
   margin: 5px auto;
-  left: 25%;
-  border: 1px solid black;
-  border-radius: 5px;
   position: relative;
-  width: 300px;
+  width: 100%;
   padding: 10px;
   padding-left: 50px;
 }
 
-.description {
-  color: black;
-  font-size: 18px;
-  letter-spacing: 2px;
-  position: relative;
-  left: 25%;
-  margin: 5px auto;
-  top: 100px;
-  float: left;
-  width: 300px;
-}
-
 .main_title {
-  position: relative;
-  left: 30%;
   margin-bottom: 0;
   padding-bottom: 0;
 }
+
+
+ .landingEntry {
+   background-color: whitesmoke;
+   position: relative;
+   left: 35%;
+   width: 30%;
+   height: 90vh;
+   top: 8vh;
+   border: 1px solid black;
+   border-radius: 5px;
+   box-shadow: 2px 2px 2px #888888;
+ }

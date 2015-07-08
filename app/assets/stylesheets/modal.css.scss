@@ -11,7 +11,12 @@
   left: 25%;
   form {
     left: 30%;
+    width: 70%;
     position: relative;
+  }
+  .close {
+    position: relative;
+    bottom: 16px;
   }
 }
 .m-backdrop {
