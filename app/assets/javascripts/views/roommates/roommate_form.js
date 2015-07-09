@@ -3,6 +3,7 @@ BillOrganizer.Views.RoommatesNew = Backbone.View.extend({
   initialize: function(options){
     this.formType = options.formType;
     this.listenTo(this.model, 'sync', this.render);
+    this.bill = options.bill || this.model.collection.bill;
   },
 
   events: {
@@ -12,7 +13,7 @@ BillOrganizer.Views.RoommatesNew = Backbone.View.extend({
   },
 
   render: function(){
-    var content = this.template({roommate: this.model, bill: this.model.collection.bill, formType: this.formType});
+    var content = this.template({roommate: this.model, bill: this.bill, formType: this.formType});
     this.$el.html(content);
     return this;
   },

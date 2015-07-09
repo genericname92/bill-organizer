@@ -44,7 +44,8 @@ BillOrganizer.Views.BillShow = Backbone.CompositeView.extend({
     var modal = new BillOrganizer.Views.RoommatesNew({
       model: roommate,
       formType: "Create",
-      collection: this.model.roommates()
+      collection: this.model.roommates(),
+      bill: this.model
     });
     $('body').prepend(modal.render().$el);
   },
