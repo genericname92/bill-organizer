@@ -10,6 +10,7 @@
 .main_title {
   margin-bottom: 0;
   padding-bottom: 0;
+  width: 100%;
 }
 
 
@@ -23,4 +24,15 @@
    box-shadow: 2px 2px 2px #888888;
    display:block;justify-content:center;align-items:center;
    top: 20%;
+   .sign_in {
+     form {
+       width: 100%;
+       input {
+         width:100%;
+       }
+       .btn {
+         width: 50%;
+       }
+   }
+   }
  }
