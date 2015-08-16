@@ -1,6 +1,14 @@
 .type_buttons {
-  right: 80px;
+  right: 120px;
   position: relative;
+  div {
+    button {
+      img {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
 }
 
 .period {

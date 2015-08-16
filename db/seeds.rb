@@ -14,7 +14,7 @@ random_users = Array.new
 25.times do
   random_users << User.create!(email: Forgery('internet').email_address, password: "password")
 end
-BILL_TYPES = ["Gas", "Electricity", "Water", "Internet", "Utilities", "Rent"]
+BILL_TYPES = ["Gas", "Electricity", "Water", "Internet", "Food", "Rent"]
 (1..8).each do |num|
   BILL_TYPES.each do |type|
       #make a random bill
