@@ -5,7 +5,6 @@ BillOrganizer.Views.BillItem = Backbone.View.extend({
 
   events: {
     "click .deleteBill": "destroyBill",
-    "click .turnPage": "turnPage",
   },
 
   initialize: function(){
@@ -30,6 +29,9 @@ BillOrganizer.Views.BillItem = Backbone.View.extend({
     var edate = this.parseDate(end_date);
     var content = this.template({bill: this.model, date: date, from_date: fdate, end_date: edate});
     this.$el.html(content);
+    if (this.model === this.collection.last()){
+      this.$el.css({"border-bottom": "1px solid black"});
+    }
     return this;
   },
 
@@ -41,10 +43,6 @@ BillOrganizer.Views.BillItem = Backbone.View.extend({
     }
   },
 
-  turnPage: function(event){
-    console.log("got there");
-    $(event.currentTarget.parentElement).addClass('activePage');
-  },
 
 
 });

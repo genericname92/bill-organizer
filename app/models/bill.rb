@@ -19,7 +19,7 @@ class Bill < ActiveRecord::Base
   validates :title, :bill_type, :owner_id, :amount, :from_date, :end_date, presence: true
   validate :date_durations
   has_many :roommates, dependent: :destroy
-  has_many :follows
+  has_many :follows, dependent: :destroy
   has_many :tagged_users, through: :follows, source: :user
   has_many :comments, dependent: :destroy
   belongs_to(

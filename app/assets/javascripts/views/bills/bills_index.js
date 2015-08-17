@@ -11,7 +11,7 @@ BillOrganizer.Views.BillsIndex = Backbone.CompositeView.extend({
       this.listenToOnce(this.collection,
          'sync',
          function(){
-            this.collection.each(this.addBill.bind(this))
+            this.collection.each(this.addBill.bind(this));
          });
     }
 
@@ -19,7 +19,7 @@ BillOrganizer.Views.BillsIndex = Backbone.CompositeView.extend({
       this.listenToOnce(this.taggedBills,
         'sync',
         function(){
-          this.taggedBills.each(this.addTaggedBill.bind(this))
+          this.taggedBills.each(this.addTaggedBill.bind(this));
         });
     }
     this.collection.each(this.addBill.bind(this));
@@ -27,12 +27,12 @@ BillOrganizer.Views.BillsIndex = Backbone.CompositeView.extend({
   },
 
   addBill: function(bill) {
-    var view = new BillOrganizer.Views.BillItem({model: bill});
+    var view = new BillOrganizer.Views.BillItem({model: bill, collection: this.collection});
     this.addSubview('.billList', view);
   },
 
   addTaggedBill: function(bill){
-    var view = new BillOrganizer.Views.BillItem({model: bill});
+    var view = new BillOrganizer.Views.BillItem({model: bill, collection: this.taggedBills});
     this.addSubview('.taggedBills', view);
   },
 

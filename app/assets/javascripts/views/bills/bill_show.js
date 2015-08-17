@@ -106,6 +106,7 @@ BillOrganizer.Views.BillShow = Backbone.CompositeView.extend({
   destroyBill: function(){
     var confirmation = confirm("Are you sure you want to delete this bill?");
     if (confirmation) {
+      this.collection.remove(this.model);
       this.model.destroy();
       this.remove();
       Backbone.history.navigate("", {trigger: true});
