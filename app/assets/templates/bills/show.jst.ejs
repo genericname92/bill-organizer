@@ -4,9 +4,10 @@
     <div class="billShowTitle pull-left"><%= bill.escape("title") %></div>
     <% if (window.CURRENT_USER_ID === parseInt(bill.escape("owner_id"))){ %>
       <button
-        class="editBill pull-left btn-group btn-group-sm glyphicon glyphicon-pencil"
+        class="editBill pull-left btn-group btn-group-sm"
         type=button
         title="Edit this bill!">
+        <span class="glyphicon glyphicon-pencil"></span>
       </button>
       <button
         class="deleteBill close"
@@ -43,7 +44,8 @@
       <button
         type="button"
         title="View Email Preview!"
-        class="invoice glyphicon glyphicon-envelope" >
+        class="invoice" >
+        <span class="glyphicon glyphicon-envelope" />
       </button>
     </label>
   <% } %>
@@ -54,7 +56,7 @@
     <ul class="errors"></ul>
     <form class="newComment">
       <textarea name="body" placeholder="Add a comment"></textarea>
-      <input type="submit" class="newCommentButton btn btn-info glyphicon glyphicon-plus"
+      <input type="submit" class="newCommentButton btn btn-info"
         title="Add a comment!" value="Post!">
       </input>
     </form>
@@ -67,8 +69,8 @@
 <% if (window.CURRENT_USER_ID === parseInt(bill.escape("owner_id"))){ %>
 
     <button
-      class="btn btn-info glyphicon glyphicon-plus roommateNew"
-      title="Add a new roommate!">Add new person
+      class="btn btn-info roommateNew"
+      title="Add a new roommate!"><span class="glyphicon glyphicon-plus"></span><span>Add new person</span>
     </button>
 <% } %>
   <div class="roommateContainer group"></div>
