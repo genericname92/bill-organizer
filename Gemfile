@@ -29,3 +29,5 @@ group :development, :test do
   gem 'binding_of_caller'
   gem 'pry-rails'
 end
+
+ruby "2.4.2"
