@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -42,10 +41,9 @@ ActiveRecord::Schema.define(version: 20150619170825) do
     t.boolean  "viewed",     default: false
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
+    t.index ["bill_id"], name: "index_follows_on_bill_id", using: :btree
+    t.index ["user_id"], name: "index_follows_on_user_id", using: :btree
   end
-
-  add_index "follows", ["bill_id"], name: "index_follows_on_bill_id", using: :btree
-  add_index "follows", ["user_id"], name: "index_follows_on_user_id", using: :btree
 
   create_table "roommates", force: :cascade do |t|
     t.integer  "bill_id",                    null: false

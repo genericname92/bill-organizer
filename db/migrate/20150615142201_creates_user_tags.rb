@@ -1,4 +1,4 @@
-class CreatesUserTags < ActiveRecord::Migration
+class CreatesUserTags < ActiveRecord::Migration[4.2]
   def change
     create_table :follows do |t|
       t.integer :bill_id, null: false

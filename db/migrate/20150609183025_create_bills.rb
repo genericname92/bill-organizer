@@ -1,5 +1,4 @@
-class CreateBills < ActiveRecord::Migration
-  def change
+class CreateBills < ActiveRecord::Migration[4.2]
     create_table :bills do |t|
       t.integer :owner_id
       t.string :title, null: false

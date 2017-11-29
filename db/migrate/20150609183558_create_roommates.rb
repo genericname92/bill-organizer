@@ -1,4 +1,4 @@
-class CreateRoommates < ActiveRecord::Migration
+class CreateRoommates < ActiveRecord::Migration[4.2]
   def change
     create_table :roommates do |t|
       t.integer :bill_id, null: false

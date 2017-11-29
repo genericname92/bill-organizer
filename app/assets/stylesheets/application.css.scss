@@ -18,21 +18,9 @@
  @import "bootstrap";
 
 body {
-
-  background: url(http://res.cloudinary.com/bill-organizer/image/upload/q_23/v1436245950/DeathtoStock_Medium9_oimsan.jpg) no-repeat center center fixed;
-
- -webkit-background-size: 100% 100%;
-
- -moz-background-size: 100% auto;
-
- -ms-background-size: 100% auto;
-
- -o-background-size: 100% auto;
-
- background-size: 100% auto;
- height: 100%;
- min-height: 600px;
- min-width: 1100px;
+  background: url(http://res.cloudinary.com/bill-organizer/image/upload/c_scale,w_1047/v1436245950/DeathtoStock_Medium9_oimsan.jpg) no-repeat center center fixed;
+  background-size: cover;
+  overflow: hidden;
 }
 ul {
   list-style-type: none;
@@ -50,9 +38,11 @@ li {
 
 #main {
   background-color: rgba(255, 255, 255, 1);
-  min-width: 1100px;
-  min-height: 600px;
-  position: relative;
-  bottom: 20px;
+  min-width: 700px;
+  width: 90%;
+  left: 5%;
+  height: 100%;
+  position: absolute;
+  top: 52px;
   overflow: hidden;
 }

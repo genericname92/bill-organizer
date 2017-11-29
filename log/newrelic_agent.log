@@ -1007,3 +1007,63 @@
 [2017-11-28 22:55:18 -0800 Simons-MacBook-Pro.local (60938)] ERROR : Invalid license key, please contact support@newrelic.com
 [2017-11-28 22:55:18 -0800 Simons-MacBook-Pro.local (60938)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
 [2017-11-28 22:55:23 -0800 Simons-MacBook-Pro.local (60938)] INFO : Starting Agent shutdown
+[2017-11-28 23:38:50 -0800 Simons-MacBook-Pro.local (650)] INFO : Starting the New Relic agent version 4.6.0.338 in "development" environment.
+[2017-11-28 23:38:50 -0800 Simons-MacBook-Pro.local (650)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2017-11-28 23:38:50 -0800 Simons-MacBook-Pro.local (650)] WARN : No configuration file found. Working directory = /Users/simonhsieh/Workspace/bill-organizer
+[2017-11-28 23:38:50 -0800 Simons-MacBook-Pro.local (650)] WARN : Looked in these locations (based on defaults): /Users/simonhsieh/Workspace/bill-organizer/config/newrelic.yml, /Users/simonhsieh/Workspace/bill-organizer/newrelic.yml, /Users/simonhsieh/Workspace/bill-organizer/config/newrelic.yml, /Users/simonhsieh/Workspace/bill-organizer/newrelic.yml, /Users/simonhsieh/.newrelic/newrelic.yml, /Users/simonhsieh/newrelic.yml
+[2017-11-28 23:38:50 -0800 Simons-MacBook-Pro.local (650)] INFO : Environment: development
+[2017-11-28 23:38:50 -0800 Simons-MacBook-Pro.local (650)] INFO : No known dispatcher detected.
+[2017-11-28 23:38:50 -0800 Simons-MacBook-Pro.local (650)] INFO : Application: development
+[2017-11-28 23:38:50 -0800 Simons-MacBook-Pro.local (650)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[2017-11-28 23:38:50 -0800 Simons-MacBook-Pro.local (650)] INFO : Installing ActiveRecord 5 instrumentation
+[2017-11-28 23:38:50 -0800 Simons-MacBook-Pro.local (650)] INFO : Installing Rails 3+ middleware instrumentation
+[2017-11-28 23:38:50 -0800 Simons-MacBook-Pro.local (650)] INFO : Installing Net instrumentation
+[2017-11-28 23:38:50 -0800 Simons-MacBook-Pro.local (650)] INFO : Installing deferred Rack::Builder instrumentation
+[2017-11-28 23:38:50 -0800 Simons-MacBook-Pro.local (650)] INFO : Installing Rack::Builder middleware instrumentation
+[2017-11-28 23:38:50 -0800 Simons-MacBook-Pro.local (650)] INFO : Installing ActiveJob instrumentation
+[2017-11-28 23:38:50 -0800 Simons-MacBook-Pro.local (650)] INFO : Installing Rails 5 Controller instrumentation
+[2017-11-28 23:38:50 -0800 Simons-MacBook-Pro.local (650)] INFO : Installing Rails 5 view instrumentation
+[2017-11-28 23:38:50 -0800 Simons-MacBook-Pro.local (650)] INFO : Installing Rails 5 Action Cable instrumentation
+[2017-11-28 23:38:50 -0800 Simons-MacBook-Pro.local (650)] INFO : Finished instrumentation
+[2017-11-28 23:38:50 -0800 Simons-MacBook-Pro.local (650)] INFO : Doing deferred dependency-detection before Rack startup
+[2017-11-28 23:38:54 -0800 Simons-MacBook-Pro.local (650)] ERROR : Error occurred detecting: gcp
+[2017-11-28 23:38:54 -0800 Simons-MacBook-Pro.local (650)] ERROR : JSON::ParserError: 784: unexpected token at '<html><head><meta http-equiv="refresh" content="0;url=http://lookup.t-mobile.com/index.php?origURL=http://metadata.google.internal/computeMetadata/v1/instance/&bc="/></head><body><script type="text/javascript">window.location="http://lookup.t-mobile.com/index.php?origURL="+escape(window.location)+"&r="+escape(document.referrer)+"&bc=";</script></body></html>'
+[2017-11-28 23:38:56 -0800 Simons-MacBook-Pro.local (650)] ERROR : Invalid license key, please contact support@newrelic.com
+[2017-11-28 23:38:56 -0800 Simons-MacBook-Pro.local (650)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[2017-11-29 00:20:48 -0800 Simons-MacBook-Pro.local (977)] INFO : Starting the New Relic agent version 4.6.0.338 in "development" environment.
+[2017-11-29 00:20:48 -0800 Simons-MacBook-Pro.local (977)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2017-11-29 00:20:48 -0800 Simons-MacBook-Pro.local (977)] WARN : No configuration file found. Working directory = /Users/simonhsieh/Workspace/bill-organizer
+[2017-11-29 00:20:48 -0800 Simons-MacBook-Pro.local (977)] WARN : Looked in these locations (based on defaults): /Users/simonhsieh/Workspace/bill-organizer/config/newrelic.yml, /Users/simonhsieh/Workspace/bill-organizer/newrelic.yml, /Users/simonhsieh/Workspace/bill-organizer/config/newrelic.yml, /Users/simonhsieh/Workspace/bill-organizer/newrelic.yml, /Users/simonhsieh/.newrelic/newrelic.yml, /Users/simonhsieh/newrelic.yml
+[2017-11-29 00:20:48 -0800 Simons-MacBook-Pro.local (977)] INFO : Environment: development
+[2017-11-29 00:20:48 -0800 Simons-MacBook-Pro.local (977)] INFO : No known dispatcher detected.
+[2017-11-29 00:20:48 -0800 Simons-MacBook-Pro.local (977)] INFO : Application: development
+[2017-11-29 00:20:48 -0800 Simons-MacBook-Pro.local (977)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[2017-11-29 00:20:49 -0800 Simons-MacBook-Pro.local (977)] INFO : Installing ActiveRecord 5 instrumentation
+[2017-11-29 00:20:49 -0800 Simons-MacBook-Pro.local (977)] INFO : Installing Rails 3+ middleware instrumentation
+[2017-11-29 00:20:49 -0800 Simons-MacBook-Pro.local (977)] INFO : Installing Net instrumentation
+[2017-11-29 00:20:49 -0800 Simons-MacBook-Pro.local (977)] INFO : Installing deferred Rack::Builder instrumentation
+[2017-11-29 00:20:49 -0800 Simons-MacBook-Pro.local (977)] INFO : Installing Rack::Builder middleware instrumentation
+[2017-11-29 00:20:49 -0800 Simons-MacBook-Pro.local (977)] INFO : Installing ActiveJob instrumentation
+[2017-11-29 00:20:49 -0800 Simons-MacBook-Pro.local (977)] INFO : Installing Rails 5 Controller instrumentation
+[2017-11-29 00:20:49 -0800 Simons-MacBook-Pro.local (977)] INFO : Installing Rails 5 view instrumentation
+[2017-11-29 00:20:49 -0800 Simons-MacBook-Pro.local (977)] INFO : Installing Rails 5 Action Cable instrumentation
+[2017-11-29 00:20:49 -0800 Simons-MacBook-Pro.local (977)] INFO : Finished instrumentation
+[2017-11-29 00:20:57 -0800 Simons-MacBook-Pro.local (650)] INFO : Starting Agent shutdown
+[2017-11-29 00:21:07 -0800 Simons-MacBook-Pro.local (983)] INFO : Starting the New Relic agent version 4.6.0.338 in "development" environment.
+[2017-11-29 00:21:07 -0800 Simons-MacBook-Pro.local (983)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2017-11-29 00:21:07 -0800 Simons-MacBook-Pro.local (983)] WARN : No configuration file found. Working directory = /Users/simonhsieh/Workspace/bill-organizer
+[2017-11-29 00:21:07 -0800 Simons-MacBook-Pro.local (983)] WARN : Looked in these locations (based on defaults): /Users/simonhsieh/Workspace/bill-organizer/config/newrelic.yml, /Users/simonhsieh/Workspace/bill-organizer/newrelic.yml, /Users/simonhsieh/Workspace/bill-organizer/config/newrelic.yml, /Users/simonhsieh/Workspace/bill-organizer/newrelic.yml, /Users/simonhsieh/.newrelic/newrelic.yml, /Users/simonhsieh/newrelic.yml
+[2017-11-29 00:21:07 -0800 Simons-MacBook-Pro.local (983)] INFO : Environment: development
+[2017-11-29 00:21:07 -0800 Simons-MacBook-Pro.local (983)] INFO : No known dispatcher detected.
+[2017-11-29 00:21:07 -0800 Simons-MacBook-Pro.local (983)] INFO : Application: development
+[2017-11-29 00:21:07 -0800 Simons-MacBook-Pro.local (983)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[2017-11-29 00:21:07 -0800 Simons-MacBook-Pro.local (983)] INFO : Installing ActiveRecord 5 instrumentation
+[2017-11-29 00:21:07 -0800 Simons-MacBook-Pro.local (983)] INFO : Installing Rails 3+ middleware instrumentation
+[2017-11-29 00:21:07 -0800 Simons-MacBook-Pro.local (983)] INFO : Installing Net instrumentation
+[2017-11-29 00:21:07 -0800 Simons-MacBook-Pro.local (983)] INFO : Installing deferred Rack::Builder instrumentation
+[2017-11-29 00:21:07 -0800 Simons-MacBook-Pro.local (983)] INFO : Installing Rack::Builder middleware instrumentation
+[2017-11-29 00:21:07 -0800 Simons-MacBook-Pro.local (983)] INFO : Installing ActiveJob instrumentation
+[2017-11-29 00:21:07 -0800 Simons-MacBook-Pro.local (983)] INFO : Installing Rails 5 Controller instrumentation
+[2017-11-29 00:21:07 -0800 Simons-MacBook-Pro.local (983)] INFO : Installing Rails 5 view instrumentation
+[2017-11-29 00:21:07 -0800 Simons-MacBook-Pro.local (983)] INFO : Installing Rails 5 Action Cable instrumentation
+[2017-11-29 00:21:07 -0800 Simons-MacBook-Pro.local (983)] INFO : Finished instrumentation
