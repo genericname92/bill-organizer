@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby "2.4.2"
 gem 'rails'
 gem 'pg'
 gem 'sass-rails', '~> 5.0'
@@ -29,5 +30,3 @@ group :development, :test do
   gem 'binding_of_caller'
   gem 'pry-rails'
 end
-
-ruby "2.4.2"
